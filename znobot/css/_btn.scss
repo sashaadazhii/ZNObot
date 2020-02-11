@@ -1,0 +1,56 @@
+@import 'variables.scss';
+@import 'mixin.scss';
+
+.btn-wrapper {
+  
+}
+
+.btn {
+    width: 160px;
+    height: 46px;
+    margin-left: 30px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: $color-block;
+    @include font($font-regular, $fsize-primary, $weight-regular, $color-basic, none);
+    text-align: center;
+    transition: all 0.6s 0s linear;
+
+    &:hover,
+    &:active {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    &--big {
+        width: 360px;
+    }
+}
+
+.btn--transparent {
+    padding-top: 25px;
+    background: transparent;
+    transition: background 0.6s linear;
+
+    &:hover {
+        background: $color-block;
+    }
+
+    &:hover .a-colored {
+        background: transparent;
+    }
+}
+
+.btn--colored {
+    background: $color-block;
+}
+.btn-wrapper--header {
+    max-width: 360px;
+
+}
+
+
+
+

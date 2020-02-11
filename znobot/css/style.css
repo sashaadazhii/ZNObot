@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 1170px;
+  max-width: 100%;
+  padding: 115px 15px;
+  margin: 0 auto; }
+
+/*variables*/
+/*variables*/
+.btn {
+  width: 160px;
+  height: 46px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: linear-gradient(127.33deg, #278BFF 9.94%, #10A6E6 152.77%);
+  font-family: "Cera Pro Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: none;
+  text-align: center;
+  transition: all 0.6s 0s linear; }
+  .btn:hover, .btn:active {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); }
+  .btn--big {
+    width: 360px; }
+
+.btn--transparent {
+  padding-top: 25px;
+  background: transparent;
+  transition: background 0.6s linear; }
+  .btn--transparent:hover {
+    background: linear-gradient(127.33deg, #278BFF 9.94%, #10A6E6 152.77%); }
+  .btn--transparent:hover .a-colored {
+    background: transparent; }
+
+.btn--colored {
+  background: linear-gradient(127.33deg, #278BFF 9.94%, #10A6E6 152.77%); }
+
+.btn-wrapper--header {
+  max-width: 360px; }
+
+.burger {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  line-height: 45px;
+  padding: 10px;
+  font-size: 48px;
+  color: #FFF;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  z-index: 100; }
+
+.cross {
+  background: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: 10px;
+  display: none;
+  font-size: 48px;
+  color: #FFF;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  z-index: 100; }
+
+@font-face {
+  font-family: 'Cera Pro Regular';
+  src: url("../assets/fonts/CeraPro-Regular.eot");
+  src: url("../assets/fonts/CeraPro-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CeraPro-Regular.woff") format("woff"), url("../assets/fonts/CeraPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cera Pro Bold';
+  src: url("../assets/fonts/CeraPro-Bold.eot");
+  src: url("../assets/fonts/CeraPro-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CeraPro-Bold.woff") format("woff"), url("../assets/fonts/CeraPro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cera Pro Black';
+  src: url("../assets/fonts/CeraPro-Black.eot");
+  src: url("../assets/fonts/CeraPro-Black.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CeraPro-Black.woff") format("woff"), url("../assets/fonts/CeraPro-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/*header*/
+.main-header {
+  height: 100vh;
+  background: url(../assets/img/shevchenko.jpg) 50% no-repeat;
+  background-size: cover; }
+  .main-header .container {
+    height: 100%;
+    padding: 0 15px; }
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 130px; }
+
+.logo {
+  display: flex;
+  align-items: center; }
+  .logo__before, .logo__after {
+    font-family: "Cera Pro Black", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: uppercase; }
+  .logo__pic {
+    padding: 0 20px 0 10px; }
+
+.menu-wrapper {
+  display: flex;
+  align-items: center; }
+  .menu-wrapper .menu {
+    display: flex;
+    align-items: center;
+    text-align: center; }
+    .menu-wrapper .menu__item {
+      padding: 0 30px; }
+    .menu-wrapper .menu__link {
+      position: relative;
+      padding-bottom: 10px;
+      font-family: "Cera Pro Regular", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #FFF;
+      text-transform: none; }
+      .menu-wrapper .menu__link:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #278BFF;
+        visibility: hidden;
+        transition: all 0.4s linear; }
+      .menu-wrapper .menu__link:hover:before {
+        visibility: visible;
+        width: 40px; }
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 130px); }
+
+.slogan__title {
+  max-width: 50%;
+  width: 100%;
+  font-family: "Cera Pro Black", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: none; }
+
+.slogan__subtitle {
+  padding: 30px 0 60px;
+  font-family: "Cera Pro Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: none; }
+
+/*span*/
+.accent-text {
+  color: #278BFF; }
+
+.bold-text {
+  font-weight: 700; }
+
+.accent-light {
+  display: inline-block;
+  border-bottom: 2px solid #FFF;
+  padding-bottom: 2px;
+  font-size: 26px;
+  font-weight: 700; }
+
+/*MAIN*/
+.heading {
+  text-align: center; }
+  .heading__title {
+    font-family: "Cera Pro Black", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #01152C;
+    text-transform: none; }
+  .heading__title--light {
+    padding-bottom: 40px;
+    color: #FFF; }
+  .heading__subtitle {
+    padding-bottom: 60px;
+    font-family: "Cera Pro Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #01152C;
+    text-transform: none; }
+  .heading__subtitle--light {
+    width: 490px;
+    max-width: 100%;
+    padding: 0;
+    color: #FFF;
+    font-size: 24px; }
+  .heading__subtitle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 715px;
+    max-width: 100%;
+    min-height: 195px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px; }
+
+.list {
+  display: flex;
+  flex-flow: row wrap; }
+  .list .item-container {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .list .item-container:hover .list__inner {
+    cursor: pointer;
+    top: 0;
+    transform: translateY(0);
+    height: 100%;
+    opacity: 1;
+    transition: 0.6s linear; }
+  .list .item-container:hover .list__title {
+    height: 100%;
+    background: rgba(39, 140, 255, 0.6);
+    color: transparent;
+    transition: 0.3s linear; }
+  .list__link {
+    width: 100%;
+    height: 100%; }
+  .list__item {
+    display: flex;
+    flex: 1 0 auto;
+    flex: 1 0 25%;
+    max-width: 25%;
+    height: 400px;
+    padding: 15px;
+    transition: all 0.6s linear; }
+    .list__item--main {
+      flex: 50%;
+      max-width: 50%; }
+  .list__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px; }
+  .list__title {
+    height: 62px;
+    padding: 20px;
+    transform: translateY(-100%);
+    font-family: "Cera Pro Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: none;
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(127.33deg, #278BFF 9.94%, #10A6E6 152.77%); }
+  .list__inner {
+    position: absolute;
+    top: 100%;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transform: translateY(-100%);
+    font-family: "Cera Pro Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: none;
+    opacity: 0;
+    transition: 0.6s linear; }
+    .list__inner--main {
+      padding: 20px 100px; }
+
+/*instructions*/
+.instruction {
+  position: relative;
+  background: url(../assets/img/bgrmain2.jpg) 50% no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+  .instruction .container {
+    width: 1440px;
+    max-width: 100%; }
+
+@keyframes showUPTop {
+  0% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(-100px); } }
+
+@keyframes showUPBottom {
+  0% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(100px); } }
+
+.animated {
+  position: absolute;
+  transition: 0.5s linear;
+  z-index: 2; }
+  .animated:hover, .animated:active {
+    transform: translateX(0); }
+  .animated--top {
+    top: -50px;
+    left: 0;
+    transform: translateX(-100px);
+    animation-name: showUPTop;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: 1000; }
+  .animated--bottom {
+    bottom: 100px;
+    right: 0;
+    transform: translateX(100px);
+    animation-name: showUPBottom;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: 1000; }
+
+.instr {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%; }
+  .instr__item {
+    display: flex;
+    width: 1135px;
+    max-width: 100%;
+    padding-bottom: 115px;
+    padding-left: 160px; }
+  .instr__item:first-child {
+    padding-top: 115px; }
+  .instr__item:nth-child(2) {
+    padding-right: 160px;
+    padding-left: 0; }
+    .instr__item:nth-child(2) .instr__num {
+      border-right: none;
+      border-left: 2px solid rgba(39, 140, 255, 0.5); }
+    .instr__item:nth-child(2) .instr__thumb {
+      transform: translateX(45px); }
+  @media only screen and (max-width: 992px) {
+    .instr .instr__item {
+      padding-right: 10px;
+      padding-left: 10px; } }
+  .instr__container {
+    display: flex;
+    border: 2px solid rgba(39, 140, 255, 0.5);
+    border-radius: 5px; }
+  .instr__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    border-right: 2px solid rgba(39, 140, 255, 0.5);
+    font-family: "Fira Sans", sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+    color: #278BFF;
+    text-transform: none; }
+  .instr__desc {
+    align-self: center;
+    padding: 1.5em;
+    font-family: "Cera Pro Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: none;
+    line-height: 140%;
+    text-align: justify; }
+  .instr__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    transform: translateX(-45px);
+    object-fit: cover; }
+  .instr__img {
+    height: 100%; }
