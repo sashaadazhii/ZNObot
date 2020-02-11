@@ -27,8 +27,8 @@
                         <button class="burger">&#9776;</button>
                         <button class="cross">&#9932;</button>
                         <ul class="menu">
-                            <li class="menu__item"><a href="#" class="menu__link">як користуватись?</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">партнери</a></li>
+                            <li class="menu__item"><a href="#read" class="menu__link">як користуватись?</a></li>
+                            <li class="menu__item"><a href="#partners" class="menu__link">партнери</a></li>
                         </ul>
                         <div class="btn-wrapper">
                             <a href="#">
@@ -67,7 +67,7 @@
     </header>
 
     <main>
-        <section class="main-items">
+        <section class="main-items" id="bot">
             <div class="container">
                 <div class="heading">
                     <div class="heading__title">вибери бота</div>
@@ -167,7 +167,7 @@
             </div>
         </section>
 
-        <section class="instruction">
+        <section class="instruction" id="read">
             <div class="animated animated--top">
                 <img src="./assets/img/skovoroda-l.png" alt="animated image">
             </div>
@@ -226,6 +226,57 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <section class="features">
+            <div class="container">
+                <div class="heading" id="partners">
+                    <div class="heading__title">наші партнери</div>
+                </div>
+
+                <div class="features-wrapper">
+                    <ul class="feature">
+                        <li class="feature__item"><a href="https://www.lohika.com.ua/" target="blank"><img
+                                    src="./assets/img/lohika.png" alt="lohika"></a></li>
+                        <li class="feature__item"><a href="https://beetroot.academy/locations/rovno/"
+                                target="blank"><img src="./assets/img/beetroot.png" alt="beetroot"></a></li>
+                        <li class="feature__item"><a href="https://www.upwork.com/o/companies/~01dfa53b434d950372/"
+                                target="blank"><img src="./assets/img/zliva.png" alt="zlivasparava"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-nav">
+            <div class="container">
+                <div class="footer-menu-wrapper">
+                    <nav class="menu-wrapper">
+                        <ul class="menu">
+                            <li class="menu__item"><a href="#read" class="menu__link">як користуватись?</a></li>
+                            <li class="menu__item"><a href="#partners" class="menu__link">партнери</a></li>
+                        </ul>
+                        <div class="btn-wrapper">
+                            <a href="#">
+                                <a href="#bot"><button class="btn btn--light">вибрати бота</button></a>
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="btn-top" id="toTop">
+                        <svg class="icon-svg">
+                            <use xlink:href="./assets/img/arrow.svg#arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-copyright">
+            <div class="container">
+                <div class="copyright">Всі права захищено © 2019 </div>
+            </div>
+
+        </section>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

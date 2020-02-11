@@ -408,6 +408,52 @@ $animate: all 0.2s ease-in-out;
 
     &__img {
         height: 100%;
-        // object-fit: cover;
     }
+}
+
+/*footer*/
+
+.features-wrapper {
+    padding-top: 60px;
+}
+.feature {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        width: 1 / 3 * 100%;
+    }
+}
+
+.footer-nav {
+    min-height: 165px;
+    background: $color-block;
+}
+
+.footer-menu-wrapper {
+    display: flex;
+
+    .menu-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.footer-copyright {
+    background: $color-title;
+
+    .container {
+        padding: 20px 15px;
+    }
+}
+.copyright {
+    @include font($font-regular, 14px, $weight-regular, $color-basic, none);
+    text-align: center;
 }
