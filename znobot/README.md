@@ -1,1 +1,1 @@
-[Link to ZNObot](https://github.com/sashaadazhii/znobot/tree/master/znobot/index.html)
+[Link to ZNObot](https://github.com/sashaadazhii/znobot/index.html)
