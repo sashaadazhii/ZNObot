@@ -76,13 +76,17 @@
 }
 
 @include mobile {
-      .btn--light {
+    .btn {
+        margin-left: 0;
+    }
+
+    .btn--light {
         width: 95px;
         height: 28px;
         font-size: 10px;
-      }
+    }
 
-      .btn-top {
+    .btn-top {
         width: 28px;
         height: 28px;
 
@@ -90,9 +94,7 @@
             padding-top: 10px;
             padding-left: 6px;
         }
-      }
-
-
+    }
 }
 
 

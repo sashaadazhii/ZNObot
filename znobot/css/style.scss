@@ -184,12 +184,18 @@
     font-weight: $weight-bold;
 }
 
+.question-mark {
+    @include font($font-bold, 32px, $weight-regular, #FF0D0D, none);
+
+}
+
 /*MAIN*/
 
 .heading {
     text-align: center;
 
     &__title {
+        padding-bottom: 40px;
         @include font($font-black, $fsize-title, $weight-regular, $color-title, none);
 
         @include phablet {
@@ -198,7 +204,6 @@
     }
 
     &__title--light {
-        padding-bottom: 40px;
         color: $color-basic;
     }
 
@@ -220,7 +225,6 @@
         justify-content: center;
         align-items: flex-end;
         margin: 0 auto;
-        width: 400px;
         max-width: 100%;
         text-align: left;
     }
@@ -231,10 +235,61 @@
 }
 
 .random {
-    .heading__subtitle {
-        max-width: 200px;
-        @include font($font-bold, $fsize-primary, $weight-regular, $color-title, none);
+.container {
+    padding-bottom: 0;
+}
 
+    .heading__subtitle {
+        @include font($font-bold, $fsize-primary, $weight-regular, $color-title, none);
+    }
+}
+
+.test-wrapper {
+    width: 630px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.test-block,
+.answer-block {
+    padding: 12px 0;
+}
+
+.test {
+    padding: 25px;
+    background: $color-test;
+    border-radius: 5px;
+
+    &__question {
+        @include font($font-regular, $fsize-primary, $weight-regular, $color-basic, none);
+    }
+
+    &__heading {
+        padding: 50px 0 25px;
+        @include font($font-bold, 24px, $weight-regular, $color-basic, none);
+    }
+
+    &__prev-answer {
+        padding: 8px 0;
+        @include font($font-regular, $fsize-primary, $weight-regular, $color-basic, none);
+    }
+}
+
+@include mobile {
+    .test__question,
+    .test__prev-answer,
+    .test__heading {
+        font-size: 16px;
+    }
+}
+
+.answer {
+    &__item {
+        margin: 24px 0;
+        padding: 6px;
+        background: $color-test;
+        border-radius: 5px;
+        @include font($font-bold, 20px, $weight-regular, $color-basic, none);
+        text-align: center;
     }
 }
 
@@ -316,6 +371,10 @@
         @include phablet {
             height: 40px;
             padding: 10px 20px;
+        }
+
+        @include mobile {
+            font-size: 12px;
         }
     }
     

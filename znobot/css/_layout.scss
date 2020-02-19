@@ -17,10 +17,10 @@ a {
 .container {
     width: 1170px;
     max-width: 100%;
-    padding: 115px 15px;
+    padding: 112px 15px;
     margin: 0 auto;
 
     @include tablet {
-        padding: 55px 15px 55px;
+        padding: 55px 15px;
     }
 }

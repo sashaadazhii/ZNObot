@@ -13,11 +13,11 @@ a {
 .container {
   width: 1170px;
   max-width: 100%;
-  padding: 115px 15px;
+  padding: 112px 15px;
   margin: 0 auto; }
   @media only screen and (max-width: 992px) {
     .container {
-      padding: 55px 15px 55px; } }
+      padding: 55px 15px; } }
 
 /*variables*/
 /*variables*/
@@ -79,6 +79,8 @@ a {
     background: rgba(0, 0, 0, 0.3); }
 
 @media only screen and (max-width: 480px) {
+  .btn {
+    margin-left: 0; }
   .btn--light {
     width: 95px;
     height: 28px;
@@ -260,10 +262,18 @@ a {
   font-size: 26px;
   font-weight: 700; }
 
+.question-mark {
+  font-family: "Cera Pro Bold", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #FF0D0D;
+  text-transform: none; }
+
 /*MAIN*/
 .heading {
   text-align: center; }
   .heading__title {
+    padding-bottom: 40px;
     font-family: "Cera Pro Black", sans-serif;
     font-size: 48px;
     font-weight: 400;
@@ -273,7 +283,6 @@ a {
       .heading__title {
         font-size: 22px; } }
   .heading__title--light {
-    padding-bottom: 40px;
     color: #FFF; }
   .heading__subtitle {
     padding-bottom: 60px;
@@ -293,19 +302,72 @@ a {
     justify-content: center;
     align-items: flex-end;
     margin: 0 auto;
-    width: 400px;
     max-width: 100%;
     text-align: left; }
   .heading__img {
     float: right; }
 
+.random .container {
+  padding-bottom: 0; }
+
 .random .heading__subtitle {
-  max-width: 200px;
   font-family: "Cera Pro Bold", sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: #01152C;
   text-transform: none; }
+
+.test-wrapper {
+  width: 630px;
+  max-width: 100%;
+  margin: 0 auto; }
+
+.test-block,
+.answer-block {
+  padding: 12px 0; }
+
+.test {
+  padding: 25px;
+  background: #182533;
+  border-radius: 5px; }
+  .test__question {
+    font-family: "Cera Pro Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: none; }
+  .test__heading {
+    padding: 50px 0 25px;
+    font-family: "Cera Pro Bold", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: none; }
+  .test__prev-answer {
+    padding: 8px 0;
+    font-family: "Cera Pro Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: none; }
+
+@media only screen and (max-width: 480px) {
+  .test__question,
+  .test__prev-answer,
+  .test__heading {
+    font-size: 16px; } }
+
+.answer__item {
+  margin: 24px 0;
+  padding: 6px;
+  background: #182533;
+  border-radius: 5px;
+  font-family: "Cera Pro Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: none;
+  text-align: center; }
 
 .list {
   display: flex;
@@ -373,6 +435,9 @@ a {
       .list__title {
         height: 40px;
         padding: 10px 20px; } }
+    @media only screen and (max-width: 480px) {
+      .list__title {
+        font-size: 12px; } }
   .list__inner {
     position: absolute;
     top: 100%;
