@@ -18,9 +18,7 @@
             <div class="container">
                 <div class="header-nav">
                     <div class="logo">
-                        <span class="logo__before">zno</span>
-                        <img src="./assets/img/logo.png" alt="znobot logo" class="logo__pic">
-                        <span class="logo__after">bot</span>
+                        <img src="./assets/img/logozno.png" alt="znobot logo" class="logo__pic">
                     </div>
 
                     <nav class="menu-wrapper">
@@ -28,11 +26,11 @@
                         <button class="cross">&#9932;</button>
                         <ul class="menu">
                             <li class="menu__item"><a href="#read" class="menu__link">як користуватись?</a></li>
-                            <li class="menu__item"><a href="#partners" class="menu__link">партнери</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">про нас</a></li>
                         </ul>
                         <div class="btn-wrapper">
-                            <a href="#">
-                                <button class="btn">вибрати бота</button>
+                            <a href="#bot">
+                                <button class="btn btn--menu">вибрати бота</button>
                             </a>
                         </div>
                     </nav>
@@ -42,37 +40,61 @@
                     <div class="slogan">
                         <div class="slogan__title">Я уже користуюсь ЗНО ботом, <span class="accent-text"> а ти?</span>
                         </div>
-                        <div class="slogan__subtitle"><span class="bold-text">Не</span> хочеш аби тебе послали в
+                        <div class="slogan__subtitle">Не хочеш аби тебе послали в
                             заслання? тоді мерщій проходити тести!</div>
                     </div>
-
-                    <div class="btn-wrapper btn-wrapper--header">
-                        <div class="btn-wrapper">
-                            <a href="#" class="a-colored">
-                                <button class="btn btn--big btn--colored" id="btn-primary">вибрати бота</button>
-                            </a>
-
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="#">
-                                <button class=" btn btn--big btn--transparent" id="btn-secondary">як
-                                    користуватись?</button>
-                            </a>
-                        </div>
+                    <div class="btn-wrapper">
+                        <a href="#bot">
+                            <button class="btn btn--big btn--static" id="btn-primary">вибрати бота</button>
+                        </a>
                     </div>
-
+                    <div class="btn-wrapper">
+                        <a href="#read">
+                            <button class=" btn btn--big btn--transparent" id="btn-secondary">як
+                                користуватись?</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </header>
 
     <main>
+        <section class="random">
+            <div class="container">
+                <div class="heading ">
+                    <div class="heading__title">сектор приз від Андрійовича</div>
+                    <div class="heading__subtitle-wrapper">
+                        <div class="heading__subtitle">Я офігів від питання, а ти дай відповідь:</div>
+                        <div class="heading__img">
+                            <img src="./assets/img/symonenko.png" alt="question picture" class="heading__pic">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="test-wrapper">
+                    <div class="test">
+                        <div class="test-q"><span class="question-mark">? </span>“Мутен сон бачив у Києві на горах”
+                            герой “Слова про Ігорів похід”</div>
+                    </div>
+                    <div class="test__heading"> >> Варіанти відповідей: </div>
+                    <ul class="test__prev">
+                        <li class="test__prev-answer"><span class="bold-text ">- А:</span> Всеволод </li>
+                        <li class="test__prev-answer"><span class="bold-text ">- Б:</span> Святослав </li>
+                        <li class="test__prev-answer"><span class="bold-text ">- В:</span> Всеволод </li>
+                        <li class="test__prev-answer"><span class="bold-text ">- Г:</span> Ігор </li>
+                        <li class="test__prev-answer"><span class="bold-text ">- Д</span> Олег </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
         <section class="main-items" id="bot">
             <div class="container">
                 <div class="heading">
                     <div class="heading__title">вибери бота</div>
-                    <div class="heading__subtitle">*Але перед цим, <a href="#read"><span class="accent-text"> почитай
-                            </span></a> як користуватись, якщо ти у нас вперше</div>
                 </div>
 
                 <ul class="list">
@@ -81,33 +103,70 @@
                             <a href="#" class="list__link">
                                 <img src="./assets/img/shevchenko.jpg" class="list__img" alt="lang">
                                 <h4 class="list__title">Українська мова та література</h4>
-                                <div class="list__inner list__inner--main">
-                                    <p>Я допоможу тобі підготуватись до ЗНО з легкістю! Усе зовcім просто: я -
-                                        питаю, ти - відповідаєш. Щасти!</p>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="list__item">
-                        <div class="item-container">
-                            <a href="#" class="list__link">
-                                <img src="./assets/img/history.jpg" class="list__img" alt="history">
-                                <h4 class="list__title">Історія України</h4>
                                 <div class="list__inner">
-                                    <p>Давай перевіримо твої знання з історії України.Тільки не хвилюйся! В мене вийшло
-                                        увійти в історію, і в тебе вийде – пройти цей тест.!</p>
+                                    <p class="list__slogan">клікай на платформу та починай вчитись</p>
+                                    <ul class="social">
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#telegram"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#viber"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#whatsapp"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#messenger"></use>
+                                                </svg></a></li>
+                                    </ul>
                                 </div>
                             </a>
                         </div>
                     </li>
                     <li class="list__item">
                         <div class="item-container">
+                            <img src="./assets/img/historynew.jpg" class="list__img" alt="history">
+                            <h4 class="list__title">Історія України</h4>
+                            <div class="list__inner">
+                                <p class="list__slogan">клікай на платформу та починай вчитись</p>
+                                <ul class="social">
+                                    <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                <use xlink:href="./assets/img/sprite.svg#telegram"></use>
+                                            </svg></a></li>
+                                    <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                <use xlink:href="./assets/img/sprite.svg#viber"></use>
+                                            </svg></a></li>
+                                    <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                <use xlink:href="./assets/img/sprite.svg#whatsapp"></use>
+                                            </svg></a></li>
+                                    <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                <use xlink:href="./assets/img/sprite.svg#messenger"></use>
+                                            </svg></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <div class="item-container">
                             <a href="#" class="list__link">
-                                <img src="./assets/img/math.jpg" class="list__img" alt="math">
+                                <img src="./assets/img/mathnew.jpg" class="list__img" alt="math">
                                 <h4 class="list__title">Математика</h4>
                                 <div class="list__inner">
-                                    <p>Готовий до тестів з математики? Найцікавіші задачі, формули, квадратні, лінійні,
-                                        кубічні рівняння та правильні рішення – чекають на тебе! </p>
+                                    <p class="list__slogan">клікай на платформу та починай вчитись</p>
+                                    <ul class="social">
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#telegram"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#viber"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#whatsapp"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#messenger"></use>
+                                                </svg></a></li>
+                                    </ul>
                                 </div>
                             </a>
                         </div>
@@ -115,11 +174,24 @@
                     <li class="list__item">
                         <div class="item-container">
                             <a href="#" class="list__link">
-                                <img src="./assets/img/geography.jpg" class="list__img" alt="geography">
+                                <img src="./assets/img/geographynew.jpg" class="list__img" alt="geography">
                                 <h4 class="list__title">Географія</h4>
                                 <div class="list__inner">
-                                    <p>Ми вирушаємо з тобою у далекі мандри! Для цього тобі знадобляться знання з
-                                        географії, тому приготуйся пройти цей не складний тест. </p>
+                                    <p class="list__slogan">клікай на платформу та починай вчитись</p>
+                                    <ul class="social">
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#telegram"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#viber"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#whatsapp"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#messenger"></use>
+                                                </svg></a></li>
+                                    </ul>
                                 </div>
                             </a>
                         </div>
@@ -127,12 +199,24 @@
                     <li class="list__item">
                         <div class="item-container">
                             <a href="#" class="list__link">
-                                <img src="./assets/img/physics.jpg" class="list__img" alt="physics">
+                                <img src="./assets/img/physicsnew.jpg" class="list__img" alt="physics">
                                 <h4 class="list__title">Фізика</h4>
                                 <div class="list__inner">
-                                    <p>Закони, явища та матерії зараз постануть перед тобою у тестах з фізики. Я буду
-                                        запитувати, а ти – відповідати. Нічого складного! Світ закономірностей чекає на
-                                        тебе! </p>
+                                    <p class="list__slogan">клікай на платформу та починай вчитись</p>
+                                    <ul class="social">
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#telegram"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#viber"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#whatsapp"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#messenger"></use>
+                                                </svg></a></li>
+                                    </ul>
                                 </div>
                             </a>
                         </div>
@@ -140,12 +224,24 @@
                     <li class="list__item">
                         <div class="item-container">
                             <a href="#" class="list__link">
-                                <img src="./assets/img/chemistry.jpg" class="list__img" alt="chemistry">
+                                <img src="./assets/img/chemistrynew.jpg" class="list__img" alt="chemistry">
                                 <h4 class="list__title">Хімія</h4>
                                 <div class="list__inner">
-                                    <p>А як щодо хімії? Ммм...захоплюючі молекулярно-атомні перетворення, дослідження
-                                        властивостей елементів і хмічних сполук, їх взаємодії та реакцій. Ці тести
-                                        допоможуть перевірити твої знання. Стартуй! </p>
+                                    <p class="list__slogan">клікай на платформу та починай вчитись</p>
+                                    <ul class="social">
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#telegram"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#viber"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#whatsapp"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#messenger"></use>
+                                                </svg></a></li>
+                                    </ul>
                                 </div>
                             </a>
                         </div>
@@ -153,12 +249,24 @@
                     <li class="list__item">
                         <div class="item-container">
                             <a href="#" class="list__link">
-                                <img src="./assets/img/biology.jpg" class="list__img" alt="biology">
+                                <img src="./assets/img/biologynew.jpg" class="list__img" alt="biology">
                                 <h4 class="list__title">Біологія</h4>
                                 <div class="list__inner">
-                                    <p> Давай відкладемо всі справи та пройдемо тест на знання біології. Попереду у нас
-                                        багато цікавих термінів, історій про відкриття та дослідження. Приготуйся
-                                        поринути у світ науки про життя! </p>
+                                    <p class="list__slogan">клікай на платформу та починай вчитись</p>
+                                    <ul class="social">
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#telegram"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#viber"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#whatsapp"></use>
+                                                </svg></a></li>
+                                        <li class="social__item"><a href="#" class="social__link"><svg class="icon-svg">
+                                                    <use xlink:href="./assets/img/sprite.svg#messenger"></use>
+                                                </svg></a></li>
+                                    </ul>
                                 </div>
                             </a>
                         </div>
@@ -168,92 +276,49 @@
         </section>
 
         <section class="instruction" id="read">
-            <div class="animated animated--top">
-                <img src="./assets/img/skovoroda-l.png" alt="animated image">
-            </div>
             <div class="container">
                 <div class="heading ">
                     <div class="heading__title heading__title--light">як користуватися? </div>
-                    <div class="heading__subtitle-wrapper">
-                        <div class="heading__subtitle heading__subtitle--light">Насправді, все дуже просто, поки за нами
-                            підглядає <span class="accent-light">Григорій Сковорода</span> , я тобі швиденько розповім.
-                            Отже:</div>
-                    </div>
                 </div>
 
-                <div class="instr-container">
-                    <div class="instr">
-                        <section class="instr__item">
-                            <div class="instr__container">
-                                <div class="instr__num">1</div>
-                                <div class="instr__desc"> Перш за все нам потрібно прочитати до кінця як правильно
-                                    користуватись ботом. Насправді все дуже просто, але навіть Сковорода підглядає, бо
-                                    не зміг самостійно розібратись </div>
-                            </div>
-                            <div class="instr__thumb">
-                                <img src="./assets/img/mac3.png" alt="instruction photo" class="instr__img">
-                            </div>
-                        </section>
-
-                        <section class="instr__item">
-                            <div class="instr__thumb">
-                                <img src="./assets/img/mac2.png" alt="instruction photo" class="instr__img">
-                            </div>
-                            <div class="instr__container">
-                                <div class="instr__desc"> Далі, після того, як ми прочитали як правильно користуватись
-                                    ботом і вже готові тестів, вибираємо потрібну категорію, але також не забуваємо
-                                    прочитати вводний текст</div>
-                                <div class="instr__num">2</div>
-                            </div>
-                        </section>
-
-                        <section class="instr__item">
-                            <div class="instr__container">
-                                <div class="instr__num">3</div>
-                                <div class="instr__desc"> І ось ми уже в телеграмі. Щоб почати виконувати тести,
-                                    потрібно натиснути кнопку “розпочати”. Далі вам по черзі задаються питання. Ваша
-                                    задача вибирати правильно відповідь. Щасти!</div>
-                            </div>
-                            <div class="instr__thumb">
-                                <img src="./assets/img/mac1.png" alt="instruction photo" class="instr__img">
-                            </div>
-                        </section>
+                <div class="instr-wrapper">
+                    <div class="instr-block">
+                        <div class="instr-block__img"><img src="./assets/img/use1.jpg" alt="how to use bot"
+                                class="instr-block__pic"></div>
+                        <div class="instr-block__desc">
+                            <div class="instr-block__text">Береш свій телефон</div>
+                            <div class="instr-block__number">1</div>
+                        </div>
+                    </div>
+                    <div class="instr-block instr-block--reverse">
+                        <div class="instr-block__img"><img src="./assets/img/use2.jpg" alt="how to use bot"
+                                class="instr-block__pic"></div>
+                        <div class="instr-block__desc">
+                            <div class="instr-block__text">Вибираєш бота</div>
+                            <div class="instr-block__number">2</div>
+                        </div>
+                    </div>
+                    <div class="instr-block">
+                        <div class="instr-block__img"><img src="./assets/img/use3.jpg" alt="how to use bot"
+                                class="instr-block__pic"></div>
+                        <div class="instr-block__desc">
+                            <div class="instr-block__text">Прокачуєш знання</div>
+                            <div class="instr-block__number">3</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="animated animated--bottom">
-                <img src="./assets/img/skovoroda-r.png" alt="animated image">
             </div>
         </section>
     </main>
 
     <footer>
-        <section class="features">
-            <div class="container">
-                <div class="heading" id="partners">
-                    <div class="heading__title">наші партнери</div>
-                </div>
-
-                <div class="features-wrapper">
-                    <ul class="feature">
-                        <li class="feature__item"><a href="https://www.lohika.com.ua/" target="blank"><img
-                                    src="./assets/img/lohika.png" alt="lohika"></a></li>
-                        <li class="feature__item"><a href="https://beetroot.academy/locations/rovno/"
-                                target="blank"><img src="./assets/img/beetroot.png" alt="beetroot"></a></li>
-                        <li class="feature__item"><a href="https://www.upwork.com/o/companies/~01dfa53b434d950372/"
-                                target="blank"><img src="./assets/img/zliva.png" alt="zlivasparava"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <section class="footer-nav">
             <div class="container">
                 <div class="footer-menu-wrapper">
                     <nav class="menu-wrapper">
                         <ul class="menu">
                             <li class="menu__item"><a href="#read" class="menu__link">як користуватись?</a></li>
-                            <li class="menu__item"><a href="#partners" class="menu__link">партнери</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">про нас</a></li>
                         </ul>
                         <div class="btn-wrapper">
                             <a href="#">
@@ -263,7 +328,7 @@
                     </nav>
                     <div class="btn-top" id="toTop">
                         <svg class="icon-svg">
-                            <use xlink:href="./assets/img/arrow.svg#arrow"></use>
+                            <use xlink:href="./assets/img/sprite.svg#arrow"></use>
                         </svg>
                     </div>
                 </div>
@@ -282,7 +347,10 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/questions.js"></script>
 </body>
 
 </html>

@@ -42,6 +42,14 @@
     background: url(../assets/img/shevchenko.jpg) 50% no-repeat;
     background-size: cover;
 
+    @include phablet {
+        background-position: right;
+    }
+
+    @include mobile {
+        background-position-x: 75%;
+    }
+
     .container {
         height: 100%;
         padding: 0 15px;
@@ -56,19 +64,13 @@
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-
-    &__before,
-    &__after {
-        @include font($font-black, 36px, $weight-regular, $color-basic, $uppercase);
-    }
+    min-width: 80px;
 
     &__pic {
-        padding: 0 20px 0 10px;
+        width: 100%;
     }
 }
-$animate: all 0.2s ease-in-out;
+
 .menu-wrapper {
     display: flex;
     align-items: center;
@@ -107,6 +109,12 @@ $animate: all 0.2s ease-in-out;
     }
 }
 
+@include phablet {
+    .header-nav .menu-wrapper {
+        display: none;
+    }
+}
+
 .header-content {
     display: flex;
     flex-direction: column;
@@ -124,6 +132,39 @@ $animate: all 0.2s ease-in-out;
     &__subtitle {
         padding: 30px 0 60px;
         @include font($font-regular, $fsize-primary, $weight-regular, rgba(255, 255, 255, 0.8), none);
+    }
+    
+    @include tablet {
+        .slogan__title {
+            padding-top: 40px;
+            max-width: 75%;
+            font-size: $fsize-title;
+        }
+
+        .slogan__subtitle {
+            max-width: 75%;
+            // font-size: 14px;
+        }
+    }
+
+    @include phablet {
+        .slogan__title {
+            padding-top: 40px;
+            max-width: 75%;
+            font-size: 36px;
+        }
+    }
+
+    @include mobile {
+        .slogan__title {
+            max-width: 225px;
+            padding-top: 40px;
+            font-size: 24px;
+        }
+
+        .slogan__subtitle {
+            font-size: 14px;
+        }
     }
 }
 
@@ -150,6 +191,10 @@ $animate: all 0.2s ease-in-out;
 
     &__title {
         @include font($font-black, $fsize-title, $weight-regular, $color-title, none);
+
+        @include phablet {
+            font-size: 22px;
+        }
     }
 
     &__title--light {
@@ -173,13 +218,23 @@ $animate: all 0.2s ease-in-out;
     &__subtitle-wrapper {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         margin: 0 auto;
-        width: 715px;
+        width: 400px;
         max-width: 100%;
-        min-height: 195px;
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 10px;
+        text-align: left;
+    }
+
+    &__img {
+        float: right;
+    }
+}
+
+.random {
+    .heading__subtitle {
+        max-width: 200px;
+        @include font($font-bold, $fsize-primary, $weight-regular, $color-title, none);
+
     }
 }
 
@@ -192,43 +247,49 @@ $animate: all 0.2s ease-in-out;
         width: 100%;
         height: 100%;
     }
-
     
-    .item-container:hover .list__inner {
+    .item-container:hover .list__inner,
+    .item-container:active .list__inner,
+    .item-container:focus .list__inner {
         cursor: pointer;
         top: 0;
         transform: translateY(0);
         height: 100%;
-        // background: rgba(39, 140, 255, 0.6);
+        width: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(169.14deg, rgba(5, 64, 118, 0.6) -21.38%, rgba(31, 142, 243, 0.19) 87.74%);
         opacity: 1;
         transition: 0.6s linear;
-    }
-
-    .item-container:hover .list__title {
-        height: 100%;
-        background: rgba(39, 140, 255, 0.6);
-        color: transparent;
-        transition: 0.3s linear;
-    }
-
-    &__link {
-        
-        width: 100%;
-        height: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        outline: none;
     }
 
     &__item {
         display: flex;
-        flex: 1 0 auto;
         flex: 1 0 25%;
         max-width: 25%;
         height: 400px;
         padding: 15px;
         transition: all 0.6s linear;
 
+        @include mobile {
+            height: 50%;
+            padding: 0;
+        }
+
         &--main {
             flex: 50%;
             max-width: 50%;
+        }
+
+        @include tablet {
+            flex: 50%;
+            max-width: 50%;
+        }
+
+        @include phablet {
+            flex: 100%;
+            max-width: 100%;
         }
     }
 
@@ -239,21 +300,32 @@ $animate: all 0.2s ease-in-out;
         border-radius: 5px;
     }
 
+    .item-container:hover .list__img {
+      transform: scale(-1, 1);
+    }
+
     &__title {
-        height: 62px;
+        height: 60px;
         padding: 20px;
         transform: translateY(-100%);
         @include font($font-bold, $fsize-primary, $weight-regular, $color-basic, none);
         text-align: center;
         border-radius: 5px;
         background: $color-block;
+
+        @include phablet {
+            height: 40px;
+            padding: 10px 20px;
+        }
     }
     
     &__inner {
         position: absolute;
         top: 100%;
         height: 0;
+        width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 20px;
@@ -264,6 +336,30 @@ $animate: all 0.2s ease-in-out;
 
         &--main {
             padding: 20px 100px;
+        }
+    }
+
+    &__slogan {
+        padding: 10px 0;
+        @include font($font-bold, 12px, $weight-regular, $color-basic, none);
+        line-height: 21px;
+        text-align: center;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    &__item {
+        max-width: 48px;
+        max-height: 48px;
+        margin: 10px;
+
+        &__link {
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -281,135 +377,70 @@ $animate: all 0.2s ease-in-out;
     }
 }
 
-@keyframes showUPTop {
-   0% { 
-    transform: translateX(0);
-   }
-   30% {
-      transform: translateX(-100px); 
-    }  
-  }
-
-  @keyframes showUPBottom {
-    0% { 
-     transform: translateX(0);
-    }
-    30% {
-       transform: translateX(100px); 
-     }  
-   }
-
-.animated {
-    position: absolute;
-    transition: 0.5s linear;
-    z-index: 2;
-
-        &:hover,
-        &:active {
-            transform: translateX(0);
-        }
-
-    &--top {
-        top: -50px;
-        left: 0;
-        transform: translateX(-100px);
-        animation-name: showUPTop;
-        animation-timing-function: linear;
-        animation-duration: 3s;
-        animation-delay: 3s;
-        animation-direction: alternate-reverse;
-        animation-iteration-count: 1000;
-    }
-
-    &--bottom {
-        bottom: 100px;
-        right: 0;
-        transform: translateX(100px);
-        animation-name: showUPBottom;
-        animation-timing-function: linear;
-        animation-duration: 3s;
-        animation-delay: 3s;
-        animation-direction: alternate-reverse;
-        animation-iteration-count: 1000;
-    }
-}
-
-.instr {
+.instr-block {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 80px;
+    text-align: center;
 
-    &__item {
-        display: flex;
-        width: 1135px;
-        max-width: 100%;
-        padding-bottom: 115px;
-        padding-left: 160px;
-    }
+    &__img {
+        max-width: 320px;
 
-    &__item:first-child {
-        padding-top: 115px;
-    }
-
-    &__item:nth-child(2) {
-        padding-right: 160px;
-        padding-left: 0;
-
-        .instr__num {
-            border-right: none;
-            border-left: 2px solid rgba(39, 140, 255, 0.5);
+        @include tablet {
+            max-width: 200px;
         }
 
-        .instr__thumb {
-            transform: translateX(45px);
-        }
-    }
-    
-    @include tablet {
-        .instr__item {
-            padding-right: 10px;
-            padding-left: 10px;
+        @include phablet {
+            max-width: 80px;
         }
     }
 
-    &__container {
-        display: flex;
-        border: 2px solid rgba(39, 140, 255, 0.5);
+    &__pic {
+        width: 100%;
         border-radius: 5px;
-        // box-shadow: 15px 10px 40px rgba(255, 255, 255, 0.25);
-    }
-
-    &__num {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 120px;
-        border-right: 2px solid rgba(39, 140, 255, 0.5);
-        @include font($font-number, 100px, $weight-regular, $color-accent, none);
     }
 
     &__desc {
-        align-self: center;
-        padding: 1.5em;
-        @include font($font-regular, $fsize-primary, $weight-regular, $color-basic, none);
-        line-height: 140%;
-        text-align: justify;
+        position: relative;
     }
 
-    &__thumb {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 350px;
-        transform: translateX(-45px);
-        object-fit: cover;
+    &__text {
+        position: relative;
+        @include font($font-regular, $fsize-title, $weight-regular, $color-basic, none);
+        z-index: 2;
+
+        @include tablet {
+            font-size: 1.5em;
+        }
+
+        @include mobile {
+            font-size: 12px;
+        }
     }
 
-    &__img {
-        height: 100%;
+    &__number {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: calc(50% - 5px);
+        left: 50%;
+        @include font($font-bold, 288px, $weight-regular, rgba(0, 122, 255, 0.7), none);
+        z-index: 1;
+
+        @include tablet {
+            font-size: 200px;
+        }
+
+        @include phablet {
+            font-size: 96px;
+        }
     }
 }
+
+.instr-block--reverse {
+    flex-direction: row-reverse;
+}
+
 
 /*footer*/
 
@@ -433,8 +464,12 @@ $animate: all 0.2s ease-in-out;
 }
 
 .footer-nav {
-    min-height: 165px;
+    height: 165px;
     background: $color-block;
+
+    .container {
+        padding: 60px 15px;
+    }
 }
 
 .footer-menu-wrapper {
@@ -443,6 +478,26 @@ $animate: all 0.2s ease-in-out;
     .menu-wrapper {
         width: 100%;
         justify-content: center;
+    }
+
+    .menu__link:before {
+        background-color: $color-basic;
+    }
+
+    @include phablet {
+        .menu__item {
+            padding: 0;
+        }
+
+        .menu__item:first-child {
+            display: none;
+        }
+    }
+
+    @include mobile {
+        .menu__link {
+            font-size: 10px;
+        }
     }
 }
 
@@ -456,4 +511,8 @@ $animate: all 0.2s ease-in-out;
 .copyright {
     @include font($font-regular, 14px, $weight-regular, $color-basic, none);
     text-align: center;
+}
+
+main {
+    overflow: hidden;
 }

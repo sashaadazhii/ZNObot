@@ -16,43 +16,26 @@ $(document).ready(function () {
         $("html, body").animate({ scrollTop: 0 }, 800);
     });
 
-    // $("#btn-secondary").hover(function () {
-    //     //mouse over
-    //     $(this).removeClass('btn--transparent')
-    //         .addClass('btn--colored');
-    //     $(this).css('padding-top', '25px');
+    /*btn header hover*/
+    var $btnPr = $('#btn-primary');
+    var $btnSec = $('#btn-secondary');
 
-    // });
+    $btnSec.mouseover(function () {
+        $btnPr.addClass('btn--transparent');
+        $(this).removeClass('btn--transparent');
+    });
 
-    // $("#btn-primary").mouseover(function () {
-    //     $(this).addClass('btn--transparent');
-    // });
-    // $("#btn-primary").hover(function () {
-    //     $(this).removeClass('btn--transparent');
-    // });
+    $btnSec.mouseout(function () {
+        $(this).addClass('btn--transparent');
+        $btnPr.removeClass('btn--transparent');
+    });
 
-    //mobile menu
-
+    /*mobile header btn*/
     var containerWidth = $("body").width();
-    $cross = $(".cross");
-    $menu = $(".menu");
-    $burger = $(".burger");
 
     if (containerWidth <= 768) {
-        $cross.hide();
-        $menu.hide();
-        $burger.click(function () {
-            $menu.slideToggle("slow", function () {
-                $burger.hide();
-                $cross.show();
-            });
-        });
-
-        $cross.click(function () {
-            $menu.slideToggle("slow", function () {
-                $cross.hide();
-                $burger.show();
-            });
-        });
+        $btnPr.removeClass('btn--big');
+        $btnSec.removeClass('btn--big');
     }
+
 });
