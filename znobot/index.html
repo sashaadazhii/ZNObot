@@ -22,8 +22,6 @@
                     </div>
 
                     <nav class="menu-wrapper">
-                        <button class="burger">&#9776;</button>
-                        <button class="cross">&#9932;</button>
                         <ul class="menu">
                             <li class="menu__item"><a href="#read" class="menu__link">як користуватись?</a></li>
                             <li class="menu__item"><a href="#" class="menu__link">про нас</a></li>
@@ -90,16 +88,12 @@
                             <div class="answer">
                                 <div class="answers-wrapper answer__item" v-for="option in choices" v-bind:class="{'answer__item--true': answer === option.content && option.is_correct, 
                             'answer__item--false': answer === option.content && !option.is_correct}">
-                                    <div class="input-group">
-
+                                    <label v-bind:for="option.id" class="answer__label">
                                         <input type="radio" v-model="answer" v-bind:id="option.id"
                                             v-bind:value="option.content" style="display:none;">
-
-                                        <label v-bind:for="option.id" class="answer__label">{{option.content}}</label>
-                                        <div v-if="answer === option.content"></div>
-                                    </div>
+                                        {{option.content}}</label>
+                                    <div v-if="answer === option.content"></div>
                                 </div>
-                                <!-- <div class="answer__item bold-text">А</div> -->
                             </div>
                         </div>
                     </div>

@@ -9,15 +9,6 @@ var app = new Vue({
             { id: 2, content: "В: горілиць, плакучі", is_correct: false },
             { id: 3, content: "Г: запанібрата, змито", is_correct: true }],
 
-        getQuestion: false,
         answer: null,
-    },
-
-    methods: {
-        getTest() {
-            this.getQuestion = true;
-
-
-        },
     },
 })
