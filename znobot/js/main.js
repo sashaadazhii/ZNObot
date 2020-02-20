@@ -17,18 +17,18 @@ $(document).ready(function () {
     });
 
     /*btn header hover*/
-    var $btnPr = $('#btn-primary');
-    var $btnSec = $('#btn-secondary');
+    // var $btnPr = $('#btn-primary');
+    // var $btnSec = $('#btn-secondary');
 
-    $btnSec.mouseover(function () {
-        $btnPr.addClass('btn--transparent');
-        $(this).removeClass('btn--transparent');
-    });
+    // $btnSec.mouseover(function () {
+    //     $btnPr.addClass('btn--transparent');
+    //     $(this).removeClass('btn--transparent');
+    // });
 
-    $btnSec.mouseout(function () {
-        $(this).addClass('btn--transparent');
-        $btnPr.removeClass('btn--transparent');
-    });
+    // $btnSec.mouseout(function () {
+    //     $(this).addClass('btn--transparent');
+    //     $btnPr.removeClass('btn--transparent');
+    // });
 
     /*mobile header btn*/
     var containerWidth = $("body").width();

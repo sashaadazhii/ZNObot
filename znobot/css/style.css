@@ -459,35 +459,38 @@ a {
 /*instructions*/
 .instruction {
   position: relative;
+  height: 2200px;
   background: url(../assets/img/bgrmain2.jpg) 50% no-repeat;
   background-size: cover;
   overflow: hidden; }
+  @media only screen and (max-width: 992px) {
+    .instruction {
+      max-height: 1400px; } }
+  @media only screen and (max-width: 992px) {
+    .instruction {
+      max-height: 1100px; } }
   .instruction .container {
-    width: 1440px;
-    max-width: 100%; }
+    width: 100%;
+    max-width: 100%;
+    padding: 112px 0; }
 
 .instr-block {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
   padding-top: 80px;
   text-align: center; }
   .instr-block__img {
     position: relative;
-    width: 525px; }
-    .instr-block__img:after {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: url(../assets/img/brain1.png) 50% no-repeat; }
+    width: 525px;
+    transform: translateX(-50%); }
     @media only screen and (max-width: 992px) {
       .instr-block__img {
-        max-width: 200px; } }
+        max-width: 260px; } }
     @media only screen and (max-width: 768px) {
       .instr-block__img {
-        max-width: 80px; } }
+        max-width: 200px; } }
   .instr-block__pic {
     width: 100%;
     border-radius: 5px; }
@@ -523,8 +526,18 @@ a {
       .instr-block__number {
         font-size: 96px; } }
 
+.instr-block--first {
+  position: absolute; }
+
 .instr-block--reverse {
-  flex-direction: row-reverse; }
+  flex-direction: row-reverse;
+  transform: translateY(100%); }
+  .instr-block--reverse .instr-block__img {
+    transform: scale(-1, 1) translateX(-50%); }
+
+.instr-block--last {
+  position: absolute;
+  bottom: 0; }
 
 /*footer*/
 .features-wrapper {
