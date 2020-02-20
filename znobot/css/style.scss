@@ -2,8 +2,6 @@
 @import 'variables.scss';
 @import 'btn.scss';
 @import 'mixin.scss';
-@import 'toggle.scss';
-
 
 @font-face {
     font-family: 'Cera Pro Regular';
@@ -87,7 +85,7 @@
         &__link {
             position: relative;
             padding-bottom: 10px;
-            @include font($font-regular, $fsize-primary, $weight-regular, $color-basic, none);
+            @include font($font-regular, $fsize-primary, $color-basic, none);
                     
             &:before {
                 content: '';
@@ -126,12 +124,12 @@
     &__title {
         max-width: 50%;
         width: 100%;
-        @include font($font-black, 60px, $weight-regular, $color-basic, none);
+        @include font($font-black, 60px, $color-basic, none);
     }
 
     &__subtitle {
         padding: 30px 0 60px;
-        @include font($font-regular, $fsize-primary, $weight-regular, rgba(255, 255, 255, 0.8), none);
+        @include font($font-regular, $fsize-primary, rgba(255, 255, 255, 0.8), none);
     }
     
     @include tablet {
@@ -159,7 +157,7 @@
         .slogan__title {
             max-width: 225px;
             padding-top: 40px;
-            font-size: 24px;
+            font-size: $fsize-medium;
         }
 
         .slogan__subtitle {
@@ -185,7 +183,7 @@
 }
 
 .question-mark {
-    @include font($font-bold, 32px, $weight-regular, #FF0D0D, none);
+    @include font($font-bold, 32px, #FF0D0D, none);
 
 }
 
@@ -196,7 +194,7 @@
 
     &__title {
         padding-bottom: 40px;
-        @include font($font-black, $fsize-title, $weight-regular, $color-title, none);
+        @include font($font-black, $fsize-title, $color-title, none);
 
         @include phablet {
             font-size: 22px;
@@ -209,7 +207,7 @@
 
     &__subtitle {
         padding-bottom: 60px;
-        @include font($font-regular, $fsize-primary, $weight-regular, $color-title, none);
+        @include font($font-regular, $fsize-primary, $color-title, none);
     }
 
     &__subtitle--light {
@@ -217,7 +215,7 @@
         max-width: 100%;
         padding: 0;
         color: $color-basic;
-        font-size: 24px;
+        font-size: $fsize-medium;
     }
 
     &__subtitle-wrapper {
@@ -236,12 +234,12 @@
 }
 
 .random {
-.container {
-    padding-bottom: 0;
-}
+    .container {
+        padding-bottom: 0;
+    }
 
     .heading__subtitle {
-        @include font($font-bold, $fsize-primary, $weight-regular, $color-title, none);
+        @include font($font-bold, $fsize-primary, $color-title, none);
     }
 }
 
@@ -252,7 +250,7 @@
 }
 .test-block,
 .answer-block {
-    padding: 12px 0;
+    padding: $fsize-small 0;
 }
 
 .test {
@@ -262,17 +260,17 @@
     border-radius: 5px;
 
     &__question {
-        @include font($font-regular, $fsize-primary, $weight-regular, $color-basic, none);
+        @include font($font-regular, $fsize-primary, $color-basic, none);
     }
 
     &__heading {
         padding: 50px 0 25px;
-        @include font($font-bold, 24px, $weight-regular, $color-basic, none);
+        @include font($font-bold, $fsize-medium, $color-basic, none);
     }
 
     &__prev-answer {
         padding: 8px 0;
-        @include font($font-regular, $fsize-primary, $weight-regular, $color-basic, none);
+        @include font($font-regular, $fsize-primary, $color-basic, none);
     }
 }
 
@@ -286,16 +284,25 @@
 
 .answer {
     &__item {
-        margin: 24px 0;
+        margin: $fsize-medium 0;
         padding: 6px;
         background: $color-test;
         border-radius: 5px;
-        @include font($font-regular, 20px, $weight-regular, $color-basic, none);
+        @include font($font-regular, 20px, $color-basic, none);
         text-align: center;
 
         @include mobile {
             font-size: 16px;
         }
+    }
+
+    &__label {
+        display: inline-block;
+        width: 100%;
+    }
+
+    &__label:hover {
+        cursor: pointer;
     }
 
     &__item--true {
@@ -317,7 +324,6 @@
     flex-flow: row wrap;
 
     .item-container {
-        // position: relative;
         width: 100%;
         height: 100%;
     }
@@ -329,12 +335,10 @@
     }
 
     &__title {
-        // position: absolute;
-        // width: 100%;
         height: 60px;
         padding: 20px;
         transform: translateY(-100%);
-        @include font($font-bold, $fsize-primary, $weight-regular, $color-basic, none);
+        @include font($font-bold, $fsize-primary, $color-basic, none);
         text-align: center;
         border-radius: 5px;
         background: $color-block;
@@ -345,7 +349,7 @@
         }
 
         @include mobile {
-            font-size: 12px;
+            font-size: $fsize-small;
         }
     }
     
@@ -358,9 +362,8 @@
         justify-content: center;
         height: 0;
         width: 100%;
-        // padding: 20px;
         transform: translateY(-100%);
-        @include font($font-regular, $fsize-primary, $weight-regular, $color-basic, none);
+        @include font($font-regular, $fsize-primary, $color-basic, none);
         opacity: 0;
         transition: 0.6s linear;
 
@@ -412,7 +415,7 @@
 
     &__slogan {
         padding: 10px 0;
-        @include font($font-bold, 12px, $weight-regular, $color-basic, none);
+        @include font($font-bold, $fsize-small, $color-basic, none);
         line-height: 21px;
         text-align: center;
     }
@@ -498,7 +501,7 @@
 
     &__text {
         position: relative;
-        @include font($font-regular, $fsize-title, $weight-regular, $color-basic, none);
+        @include font($font-regular, $fsize-title, $color-basic, none);
         z-index: 2;
 
         @include tablet {
@@ -506,7 +509,7 @@
         }
 
         @include mobile {
-            font-size: 12px;
+            font-size: $fsize-small;
         }
     }
 
@@ -515,7 +518,7 @@
         transform: translate(-50%, -50%);
         top: calc(50% - 5px);
         left: 50%;
-        @include font($font-bold, 288px, $weight-regular, rgba(0, 122, 255, 0.7), none);
+        @include font($font-bold, 288px, rgba(0, 122, 255, 0.7), none);
         z-index: 1;
 
         @include tablet {
@@ -600,7 +603,7 @@
     }
 }
 .copyright {
-    @include font($font-regular, 14px, $weight-regular, $color-basic, none);
+    @include font($font-regular, 14px, $color-basic, none);
     text-align: center;
 }
 

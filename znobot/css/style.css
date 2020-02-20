@@ -31,7 +31,6 @@ a {
   background: linear-gradient(127.33deg, #278BFF 9.94%, #10A6E6 152.77%);
   font-family: "Cera Pro Regular", sans-serif;
   font-size: 18px;
-  font-weight: 400;
   color: #FFF;
   text-transform: none;
   text-align: center;
@@ -89,35 +88,6 @@ a {
     .btn-top .icon-svg {
       padding-top: 10px;
       padding-left: 6px; } }
-
-.burger {
-  background: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: none;
-  line-height: 45px;
-  padding: 10px;
-  font-size: 48px;
-  color: #FFF;
-  border: 0;
-  cursor: pointer;
-  outline: none;
-  z-index: 100; }
-
-.cross {
-  background: none;
-  position: absolute;
-  top: 0px;
-  right: 0;
-  padding: 10px;
-  display: none;
-  font-size: 48px;
-  color: #FFF;
-  border: 0;
-  cursor: pointer;
-  outline: none;
-  z-index: 100; }
 
 @font-face {
   font-family: 'Cera Pro Regular';
@@ -180,7 +150,6 @@ a {
       padding-bottom: 10px;
       font-family: "Cera Pro Regular", sans-serif;
       font-size: 18px;
-      font-weight: 400;
       color: #FFF;
       text-transform: none; }
       .menu-wrapper .menu__link:before {
@@ -212,7 +181,6 @@ a {
   width: 100%;
   font-family: "Cera Pro Black", sans-serif;
   font-size: 60px;
-  font-weight: 400;
   color: #FFF;
   text-transform: none; }
 
@@ -220,7 +188,6 @@ a {
   padding: 30px 0 60px;
   font-family: "Cera Pro Regular", sans-serif;
   font-size: 18px;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
   text-transform: none; }
 
@@ -263,7 +230,6 @@ a {
 .question-mark {
   font-family: "Cera Pro Bold", sans-serif;
   font-size: 32px;
-  font-weight: 400;
   color: #FF0D0D;
   text-transform: none; }
 
@@ -274,7 +240,6 @@ a {
     padding-bottom: 40px;
     font-family: "Cera Pro Black", sans-serif;
     font-size: 48px;
-    font-weight: 400;
     color: #01152C;
     text-transform: none; }
     @media only screen and (max-width: 768px) {
@@ -286,7 +251,6 @@ a {
     padding-bottom: 60px;
     font-family: "Cera Pro Regular", sans-serif;
     font-size: 18px;
-    font-weight: 400;
     color: #01152C;
     text-transform: none; }
   .heading__subtitle--light {
@@ -312,7 +276,6 @@ a {
 .random .heading__subtitle {
   font-family: "Cera Pro Bold", sans-serif;
   font-size: 18px;
-  font-weight: 400;
   color: #01152C;
   text-transform: none; }
 
@@ -332,21 +295,18 @@ a {
   .test__question {
     font-family: "Cera Pro Regular", sans-serif;
     font-size: 18px;
-    font-weight: 400;
     color: #FFF;
     text-transform: none; }
   .test__heading {
     padding: 50px 0 25px;
     font-family: "Cera Pro Bold", sans-serif;
     font-size: 24px;
-    font-weight: 400;
     color: #FFF;
     text-transform: none; }
   .test__prev-answer {
     padding: 8px 0;
     font-family: "Cera Pro Regular", sans-serif;
     font-size: 18px;
-    font-weight: 400;
     color: #FFF;
     text-transform: none; }
 
@@ -363,13 +323,19 @@ a {
   border-radius: 5px;
   font-family: "Cera Pro Regular", sans-serif;
   font-size: 20px;
-  font-weight: 400;
   color: #FFF;
   text-transform: none;
   text-align: center; }
   @media only screen and (max-width: 480px) {
     .answer__item {
       font-size: 16px; } }
+
+.answer__label {
+  display: inline-block;
+  width: 100%; }
+
+.answer__label:hover {
+  cursor: pointer; }
 
 .answer__item--true {
   background: #00BB40; }
@@ -396,7 +362,6 @@ a {
     transform: translateY(-100%);
     font-family: "Cera Pro Bold", sans-serif;
     font-size: 18px;
-    font-weight: 400;
     color: #FFF;
     text-transform: none;
     text-align: center;
@@ -421,7 +386,6 @@ a {
     transform: translateY(-100%);
     font-family: "Cera Pro Regular", sans-serif;
     font-size: 18px;
-    font-weight: 400;
     color: #FFF;
     text-transform: none;
     opacity: 0;
@@ -462,7 +426,6 @@ a {
     padding: 10px 0;
     font-family: "Cera Pro Bold", sans-serif;
     font-size: 12px;
-    font-weight: 400;
     color: #FFF;
     text-transform: none;
     line-height: 21px;
@@ -531,7 +494,6 @@ a {
     position: relative;
     font-family: "Cera Pro Regular", sans-serif;
     font-size: 48px;
-    font-weight: 400;
     color: #FFF;
     text-transform: none;
     z-index: 2; }
@@ -548,7 +510,6 @@ a {
     left: 50%;
     font-family: "Cera Pro Bold", sans-serif;
     font-size: 288px;
-    font-weight: 400;
     color: rgba(0, 122, 255, 0.7);
     text-transform: none;
     z-index: 1; }
@@ -609,7 +570,6 @@ a {
 .copyright {
   font-family: "Cera Pro Regular", sans-serif;
   font-size: 14px;
-  font-weight: 400;
   color: #FFF;
   text-transform: none;
   text-align: center; }
