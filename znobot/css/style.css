@@ -79,8 +79,6 @@ a {
     background: rgba(0, 0, 0, 0.3); }
 
 @media only screen and (max-width: 480px) {
-  .btn {
-    margin-left: 0; }
   .btn--light {
     width: 95px;
     height: 28px;
@@ -305,7 +303,8 @@ a {
     max-width: 100%;
     text-align: left; }
   .heading__img {
-    float: right; }
+    float: right;
+    transform: translateY(30%); }
 
 .random .container {
   padding-bottom: 0; }
@@ -362,12 +361,24 @@ a {
   padding: 6px;
   background: #182533;
   border-radius: 5px;
-  font-family: "Cera Pro Bold", sans-serif;
+  font-family: "Cera Pro Regular", sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #FFF;
   text-transform: none;
   text-align: center; }
+  @media only screen and (max-width: 480px) {
+    .answer__item {
+      font-size: 16px; } }
+
+.answer__item--true {
+  background: #00BB40; }
+
+.answer__item--false {
+  background: #EE0000; }
+
+.answer__item:hover {
+  cursor: pointer; }
 
 .list {
   display: flex;

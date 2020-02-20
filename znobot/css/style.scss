@@ -231,6 +231,7 @@
 
     &__img {
         float: right;
+        transform: translateY(30%);
     }
 }
 
@@ -255,6 +256,7 @@
 }
 
 .test {
+    // position: absolute;/**/
     padding: 25px;
     background: $color-test;
     border-radius: 5px;
@@ -288,9 +290,26 @@
         padding: 6px;
         background: $color-test;
         border-radius: 5px;
-        @include font($font-bold, 20px, $weight-regular, $color-basic, none);
+        @include font($font-regular, 20px, $weight-regular, $color-basic, none);
         text-align: center;
+
+        @include mobile {
+            font-size: 16px;
+        }
     }
+
+    &__item--true {
+        background: #00BB40;
+    }
+    
+    &__item--false {
+        background: #EE0000;
+    }
+
+    &__item:hover {
+        cursor: pointer;
+    }
+
 }
 
 .list {
