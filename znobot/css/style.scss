@@ -323,21 +323,83 @@
     display: flex;
     flex-flow: row wrap;
 
-    .item-container {
-        width: 100%;
-        height: 100%;
+    &__item {
+        position: relative;
+        display: flex;
+        flex: 1 0 25%;
+        max-width: 25%;
+        height: 430px;
+        padding: 15px;
+        transition: all 0.4s linear;
+
+        &--main {
+            flex: 50%;
+            max-width: 50%;
+        }
+  
+        @include tablet {
+            flex: 50%;
+            max-width: 50%;
+        }
+        @include phablet {
+            flex: 100%;
+            max-width: 100%;
+            max-height: 50%;
+        }
+
+        @include mobile {
+            height: 200px;
+        }
     }
 
-    .item-hover-wrapper {
+    .item-container {
         position: relative;
         width: 100%;
         height: 100%;
+        transition: all 0.4s linear;
+    }
+
+    .item-image-container {
+        width: 100%;
+        height: 100%;
+    }
+    .item-title-container {
+        position: absolute;
+        width: 100%;
+        transform: translateY(-60px);
+        z-index: 5;
+
+        @include phablet {
+            transform: translateY(-30px);
+        }
+    }
+
+    .item-visible {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transition: all 0.4s linear;
+    }
+
+    .item-hidden {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include font($font-regular, $fsize-primary, $color-basic, none);
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 1;
+        transition: all 0.4s linear;
     }
 
     &__title {
         height: 60px;
         padding: 20px;
-        transform: translateY(-100%);
         @include font($font-bold, $fsize-primary, $color-basic, none);
         text-align: center;
         border-radius: 5px;
@@ -352,66 +414,13 @@
             font-size: $fsize-small;
         }
     }
-    
-    &__inner {
-        position: absolute;
-        top: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 0;
-        width: 100%;
-        transform: translateY(-100%);
-        @include font($font-regular, $fsize-primary, $color-basic, none);
-        opacity: 0;
-        transition: 0.6s linear;
-
-        &--main {
-            padding: 20px 100px;
-        }
-    }
-
-    &__item {
-        position: relative;
-        display: flex;
-        flex: 1 0 25%;
-        max-width: 25%;
-        height: 400px;
-        padding: 15px;
-        transition: all 0.6s linear;
-
-        @include mobile {
-            height: 50%;
-            padding: 0;
-        }
-
-        &--main {
-            flex: 50%;
-            max-width: 50%;
-        }
-
-        @include tablet {
-            flex: 50%;
-            max-width: 50%;
-        }
-
-        @include phablet {
-            flex: 100%;
-            max-width: 100%;
-        }
-    }
 
     &__img {
-        height: 100%;
         width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 5px;
     }
-
-    // .item-container:hover .list__img {
-    //   transform: scale(-1, 1);
-    // }
 
     &__slogan {
         padding: 10px 0;
@@ -421,35 +430,26 @@
     }
 }
 
-.item-container:hover .list__inner,
-.item-container:active .list__inner,
-.item-container:focus .list__inner {
+.item-image-container:hover .item-hidden,
+.item-image-container:active .item-hidden,
+.item-image-container:focus .item-hidden {
     cursor: pointer;
-    top: 0;
-    transform: translateY(0);
-    height: calc(100% - 30px);
-    width: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(169.14deg, rgba(5, 64, 118, 0.6) -21.38%, rgba(31, 142, 243, 0.19) 87.74%);
-    opacity: 1;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    background: rgba(0, 0, 0, 0.6);
     outline: none;
-    transition: 0.6s linear;
-}
-
-.item-container:hover ~ .list__inner {
-    cursor: pointer;
+    z-index: 3;
+    transition: all 0.4s linear;
 }
 
 .social {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
 
     &__item {
         max-width: 48px;
         max-height: 48px;
-        margin: 10px;
+        margin: 15px;
+        transition: all 0.4s linear;
 
         &__link {
             width: 100%;
@@ -479,7 +479,17 @@
     text-align: center;
 
     &__img {
-        max-width: 320px;
+        position: relative;
+        width: 525px;
+        
+        &:after {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: url(../assets/img/brain1.png) 50% no-repeat;
+        }
 
         @include tablet {
             max-width: 200px;
