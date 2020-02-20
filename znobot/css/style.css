@@ -501,10 +501,6 @@ a {
     -o-object-fit: cover;
     object-fit: cover;
     border-radius: 5px; }
-  .list .item-container:hover .list__img {
-    -webkit-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1); }
   .list__slogan {
     padding: 10px 0;
     font-family: "Cera Pro Bold", sans-serif;
@@ -694,6 +690,10 @@ a {
   color: #FFF;
   text-transform: none;
   text-align: center; }
+
+.icon-svg {
+  max-width: 48px;
+  max-height: 48px; }
 
 main {
   overflow: hidden; }

@@ -409,9 +409,9 @@
         border-radius: 5px;
     }
 
-    .item-container:hover .list__img {
-      transform: scale(-1, 1);
-    }
+    // .item-container:hover .list__img {
+    //   transform: scale(-1, 1);
+    // }
 
     &__slogan {
         padding: 10px 0;
@@ -605,6 +605,11 @@
 .copyright {
     @include font($font-regular, 14px, $color-basic, none);
     text-align: center;
+}
+
+.icon-svg {
+    max-width: 48px;
+    max-height: 48px;
 }
 
 main {
