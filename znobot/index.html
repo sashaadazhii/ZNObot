@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="icon" type="image/png" href="./assets/img/logozno.png">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>ZNOBOT</title>
@@ -47,8 +47,7 @@
                         </a>
                     </div>
                     <div class="btn-wrapper">
-                        <a href="#read">
-                            <button class=" btn btn--big btn--transparent">як
+                        <a href="#read"> <button class="btn btn--big btn--transparent">як
                                 користуватись?</button>
                         </a>
                     </div>
@@ -76,7 +75,7 @@
                             <div class="test">
                                 <div class="test__question"><span class="question-mark">? </span>
                                     {{content}} </div>
-                                <div class="test__heading"> &gt&gt Варіанти відповідей: </div>
+                                <div class="test__heading"> &gt;&gt; Варіанти відповідей: </div>
                                 <ul class="test__prev">
                                     <li class="test__prev-answer" v-for="answer in choices"> -
                                         {{answer.content}} </li>
@@ -91,8 +90,7 @@
                                     <label v-bind:for="option.id" class="answer__label">
                                         <input type="radio" v-model="answer" v-bind:id="option.id"
                                             v-bind:value="option.content" style="display:none;">
-                                        {{option.content}}</label>
-                                    <div v-if="answer === option.content"></div>
+                                        {{option.content[0]}}</label>
                                 </div>
                             </div>
                         </div>
@@ -354,16 +352,11 @@
             <div class="container">
                 <div class="copyright">Всі права захищено © 2019 </div>
             </div>
-
         </section>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/vue.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/questions.js"></script>
 </body>

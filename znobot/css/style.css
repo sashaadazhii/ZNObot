@@ -45,7 +45,8 @@ a {
   @media only screen and (max-width: 768px) {
     .btn--big {
       width: 160px;
-      margin-left: 0; } }
+      margin-left: 0;
+      font-size: 14px; } }
 
 .btn--transparent {
   background: transparent;
@@ -72,15 +73,17 @@ a {
   .btn--light {
     width: 95px;
     height: 28px;
-    font-size: 10px; }
+    font-family: "Cera Pro Bold", sans-serif;
+    font-size: 12px; }
   .btn--top {
     width: 28px;
-    height: 28px; }
+    height: 28px;
+    margin-left: 0; }
     .btn--top .icon-svg {
-      max-width: 24px;
-      max-height: 24px;
+      max-width: 28px;
+      max-height: 28px;
       padding-top: 10px;
-      padding-left: 4px; } }
+      padding-left: 5px; } }
 
 @font-face {
   font-family: 'Cera Pro Regular';
@@ -152,12 +155,15 @@ a {
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #278BFF;
+        background: #278BFF;
         visibility: hidden;
-        transition: all 0.4s linear; }
+        transition: all 0.3s linear; }
       .menu-wrapper .menu__link:hover:before {
         visibility: visible;
         width: 40px; }
+      @media only screen and (max-width: 480px) {
+        .menu-wrapper .menu__link {
+          font-family: "Cera Pro Bold", sans-serif; } }
 
 @media only screen and (max-width: 768px) {
   .header-nav .menu-wrapper {
@@ -206,27 +212,10 @@ a {
   .slogan .slogan__subtitle {
     font-size: 14px; } }
 
-/*span*/
-.accent-text {
-  color: #278BFF; }
-
-.bold-text {
-  font-weight: 700; }
-
-.accent-light {
-  display: inline-block;
-  border-bottom: 2px solid #FFF;
-  padding-bottom: 2px;
-  font-size: 26px;
-  font-weight: 700; }
-
-.question-mark {
-  font-family: "Cera Pro Bold", sans-serif;
-  font-size: 32px;
-  color: #FF0D0D;
-  text-transform: none; }
-
 /*MAIN*/
+main {
+  overflow: hidden; }
+
 .heading {
   text-align: center; }
   .heading__title {
@@ -464,12 +453,12 @@ a {
   background: url(../assets/img/bgrmain2.jpg) 50% no-repeat;
   background-size: cover;
   overflow: hidden; }
+  @media only screen and (max-width: 992px) {
+    .instruction {
+      max-height: 1350px; } }
   @media only screen and (max-width: 768px) {
     .instruction {
       max-height: 1100px; } }
-  @media only screen and (max-width: 992px) {
-    .instruction {
-      max-height: 1150px; } }
   @media only screen and (max-width: 480px) {
     .instruction {
       max-height: 900px; } }
@@ -561,10 +550,12 @@ a {
     width: 33.33333%; }
 
 .footer-nav {
-  height: 165px;
   background: linear-gradient(127.33deg, #278BFF 9.94%, #10A6E6 152.77%); }
   .footer-nav .container {
     padding: 60px 15px; }
+    @media only screen and (max-width: 768px) {
+      .footer-nav .container {
+        padding: 30px 15px; } }
 
 .footer-menu-wrapper {
   display: flex; }
@@ -572,7 +563,7 @@ a {
     width: 100%;
     justify-content: center; }
   .footer-menu-wrapper .menu__link:before {
-    background-color: #FFF; }
+    background: #FFF; }
   @media only screen and (max-width: 768px) {
     .footer-menu-wrapper .menu__item {
       padding: 0; }
@@ -580,7 +571,7 @@ a {
       display: none; } }
   @media only screen and (max-width: 480px) {
     .footer-menu-wrapper .menu__link {
-      font-size: 10px; } }
+      font-size: 12px; } }
 
 .footer-copyright {
   background: #01152C; }
@@ -598,5 +589,22 @@ a {
   max-width: 48px;
   max-height: 48px; }
 
-main {
-  overflow: hidden; }
+/*span*/
+.accent-text {
+  color: #278BFF; }
+
+.bold-text {
+  font-weight: 700; }
+
+.accent-light {
+  display: inline-block;
+  border-bottom: 2px solid #FFF;
+  padding-bottom: 2px;
+  font-size: 26px;
+  font-weight: 700; }
+
+.question-mark {
+  font-family: "Cera Pro Bold", sans-serif;
+  font-size: 32px;
+  color: #FF0D0D;
+  text-transform: none; }
