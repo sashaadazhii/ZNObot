@@ -2,10 +2,13 @@
 @import 'mixin.scss';
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 160px;
     height: 46px;
     margin-left: 30px;
-    border: none;
+    // border: none;
     border-radius: 5px;
     outline: none;
     background: $color-block;

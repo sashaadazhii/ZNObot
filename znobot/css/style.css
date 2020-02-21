@@ -22,10 +22,12 @@ a {
 /*variables*/
 /*variables*/
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 160px;
   height: 46px;
   margin-left: 30px;
-  border: none;
   border-radius: 5px;
   outline: none;
   background: linear-gradient(127.33deg, #278BFF 9.94%, #10A6E6 152.77%);
@@ -442,7 +444,7 @@ main {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.6);
   outline: none;
-  z-index: 3;
+  z-index: 4;
   transition: all 0.4s linear; }
 
 .social {
