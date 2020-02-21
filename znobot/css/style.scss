@@ -322,6 +322,7 @@
 .list {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 
     &__item {
         position: relative;
@@ -461,17 +462,23 @@
 /*instructions*/
 .instruction {
     position: relative;
-    height: 2200px;
+    height: 2300px;
     background: url(../assets/img/bgrmain2.jpg) 50% no-repeat;
     background-size: cover;
     overflow: hidden;
 
-    @include tablet {
-        max-height: 1400px;
+  
+
+    @include phablet {
+        max-height: 1100px;
     }
 
     @include tablet {
-        max-height: 1100px;
+        max-height: 1150px;
+    }
+
+      @include mobile {
+        max-height: 900px;
     }
 
     .container {
@@ -486,8 +493,12 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding-top: 80px;
+    padding: 40px;
     text-align: center;
+
+    @include mobile {
+        padding: 40px 0;
+    }
 
     &__img {
         position: relative;
@@ -510,6 +521,11 @@
         @include phablet {
             max-width: 200px;
         }
+
+        @include mobile {
+            max-width: 125px;
+            transform: translateX(-30%);
+        }
     }
 
     &__pic {
@@ -531,7 +547,8 @@
         }
 
         @include mobile {
-            font-size: $fsize-small;
+            font-size: 1em;
+            letter-spacing: 1px;
         }
     }
 
@@ -553,20 +570,20 @@
     }
 }
 .instr-block--first {
-    position: absolute;
+    // position: absolute;
 }
 
 .instr-block--reverse {
     flex-direction: row-reverse;
-    transform: translateY(100%);
+    // transform: translateY(100%);
 
     .instr-block__img {
         transform: scale(-1,1) translateX(-50%);
     }
 }
 .instr-block--last {
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
 }
 
 /*footer*/

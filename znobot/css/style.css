@@ -341,7 +341,8 @@ a {
 
 .list {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  justify-content: center; }
   .list__item {
     position: relative;
     display: flex;
@@ -459,16 +460,19 @@ a {
 /*instructions*/
 .instruction {
   position: relative;
-  height: 2200px;
+  height: 2300px;
   background: url(../assets/img/bgrmain2.jpg) 50% no-repeat;
   background-size: cover;
   overflow: hidden; }
-  @media only screen and (max-width: 992px) {
-    .instruction {
-      max-height: 1400px; } }
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 768px) {
     .instruction {
       max-height: 1100px; } }
+  @media only screen and (max-width: 992px) {
+    .instruction {
+      max-height: 1150px; } }
+  @media only screen and (max-width: 480px) {
+    .instruction {
+      max-height: 900px; } }
   .instruction .container {
     width: 100%;
     max-width: 100%;
@@ -479,8 +483,11 @@ a {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding-top: 80px;
+  padding: 40px;
   text-align: center; }
+  @media only screen and (max-width: 480px) {
+    .instr-block {
+      padding: 40px 0; } }
   .instr-block__img {
     position: relative;
     width: 525px;
@@ -491,6 +498,10 @@ a {
     @media only screen and (max-width: 768px) {
       .instr-block__img {
         max-width: 200px; } }
+    @media only screen and (max-width: 480px) {
+      .instr-block__img {
+        max-width: 125px;
+        transform: translateX(-30%); } }
   .instr-block__pic {
     width: 100%;
     border-radius: 5px; }
@@ -508,7 +519,8 @@ a {
         font-size: 1.5em; } }
     @media only screen and (max-width: 480px) {
       .instr-block__text {
-        font-size: 12px; } }
+        font-size: 1em;
+        letter-spacing: 1px; } }
   .instr-block__number {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -526,18 +538,10 @@ a {
       .instr-block__number {
         font-size: 96px; } }
 
-.instr-block--first {
-  position: absolute; }
-
 .instr-block--reverse {
-  flex-direction: row-reverse;
-  transform: translateY(100%); }
+  flex-direction: row-reverse; }
   .instr-block--reverse .instr-block__img {
     transform: scale(-1, 1) translateX(-50%); }
-
-.instr-block--last {
-  position: absolute;
-  bottom: 0; }
 
 /*footer*/
 .features-wrapper {
