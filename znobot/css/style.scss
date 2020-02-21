@@ -205,7 +205,7 @@ main {
 
     &__subtitle-wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-end;
         margin: 0 auto;
         max-width: 100%;
@@ -223,7 +223,13 @@ main {
         padding-bottom: 0;
     }
 
+    .heading__title {
+        padding-bottom: 0;
+        transform: translateY(30px);
+    }
+
     .heading__subtitle {
+        padding-bottom: 30px;
         @include font($font-bold, $fsize-primary, $color-title, none);
     }
 }
