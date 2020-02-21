@@ -352,6 +352,7 @@ main {
 
     .item-title-container {
         position: absolute;
+        top: 100%;
         width: 100%;
         transform: translateY(-60px);
         z-index: 5;
@@ -419,7 +420,8 @@ main {
 
 .item-image-container:hover .item-hidden,
 .item-image-container:active .item-hidden,
-.item-image-container:focus .item-hidden {
+.item-image-container:focus .item-hidden,
+.item-title-container:hover  {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.6);
     outline: none;
