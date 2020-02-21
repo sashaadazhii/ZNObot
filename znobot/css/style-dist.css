@@ -1,4 +1,4 @@
-
+/*variables*/
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +20,8 @@ a {
     .container {
       padding: 55px 15px; } }
 
+/*variables*/
+/*variables*/
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,15 +65,35 @@ a {
       font-size: 14px; } }
 
 .btn--transparent {
+  position: relative;
   background: transparent;
   -webkit-transition: background 0.3s linear;
   -o-transition: background 0.3s linear;
   transition: background 0.3s linear; }
+  .btn--transparent:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #278BFF;
+    visibility: hidden;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+  .btn--transparent:hover:before {
+    visibility: visible;
+    width: 50%; }
+  .btn--transparent:hover, .btn--transparent:active {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 .btn--light {
   background: #FFF;
   color: #278BFF; }
 
+/*top btn*/
 .btn--top {
   width: 47px;
   height: 47px;
@@ -80,11 +102,6 @@ a {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear; }
-  .btn--top .icon-svg {
-    width: 100%;
-    height: 100%;
-    padding-top: 19px;
-    padding-left: 15px; }
 
 @media only screen and (max-width: 480px) {
   .btn--light {
@@ -93,14 +110,9 @@ a {
     font-family: "Cera Pro Bold", sans-serif;
     font-size: 12px; }
   .btn--top {
-    width: 28px;
-    height: 28px;
-    margin-left: 0; }
-    .btn--top .icon-svg {
-      max-width: 28px;
-      max-height: 28px;
-      padding-top: 10px;
-      padding-left: 5px; } }
+    max-width: 28px;
+    max-height: 28px;
+    margin-left: 0; } }
 
 @font-face {
   font-family: 'Cera Pro Regular';
@@ -123,6 +135,7 @@ a {
   font-weight: normal;
   font-style: normal; }
 
+/*header*/
 .main-header {
   height: 100vh;
   background: url(../assets/img/shevchenko.jpg) 50% no-repeat;
@@ -284,9 +297,9 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
@@ -302,7 +315,14 @@ main {
 .random .container {
   padding-bottom: 0; }
 
+.random .heading__title {
+  padding-bottom: 0;
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px); }
+
 .random .heading__subtitle {
+  padding-bottom: 30px;
   font-family: "Cera Pro Bold", sans-serif;
   font-size: 18px;
   color: #01152C;
@@ -460,9 +480,9 @@ main {
     width: 100%;
     height: 100%;
     z-index: 2;
-    -webkit-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-    transition: all 0.4s linear; }
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
   .list .item-hidden {
     position: absolute;
     width: 100%;
@@ -487,9 +507,9 @@ main {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     z-index: 1;
-    -webkit-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-    transition: all 0.4s linear; }
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
   .list__title {
     height: 60px;
     padding: 20px;
@@ -516,7 +536,7 @@ main {
     object-fit: cover;
     border-radius: 5px; }
   .list__slogan {
-    padding: 10px 0;
+    padding: 10px 5px;
     font-family: "Cera Pro Bold", sans-serif;
     font-size: 12px;
     color: #FFF;
@@ -527,7 +547,6 @@ main {
 .item-image-container:hover .item-hidden,
 .item-image-container:active .item-hidden,
 .item-image-container:focus .item-hidden,
-.item-title-container:hover,
 .shadow:hover .item-hidden {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.6);
@@ -536,6 +555,12 @@ main {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear; }
+
+.item-image-container:hover .item-title-container,
+.item-image-container:active .item-title-container,
+.item-image-container:focus .item-title-container {
+  z-index: 0;
+  opacity: 0; }
 
 .social {
   display: -webkit-box;
@@ -556,6 +581,7 @@ main {
       width: 100%;
       height: 100%; }
 
+/*instructions*/
 .instruction {
   position: relative;
   height: 2300px;

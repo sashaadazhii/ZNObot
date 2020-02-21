@@ -384,7 +384,7 @@ main {
         width: 100%;
         height: 100%;
         z-index: 2;
-        transition: all 0.4s linear;
+        transition: all 0.3s linear;
     }
 
     .item-hidden {
@@ -399,7 +399,7 @@ main {
         background: rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         z-index: 1;
-        transition: all 0.4s linear;
+        transition: all 0.3s linear;
     }
 
     &__title {
@@ -428,7 +428,7 @@ main {
     }
 
     &__slogan {
-        padding: 10px 0;
+        padding: 10px 5px;
         @include font($font-bold, $fsize-small, $color-basic, none);
         line-height: 21px;
         text-align: center;
@@ -438,13 +438,23 @@ main {
 .item-image-container:hover .item-hidden,
 .item-image-container:active .item-hidden,
 .item-image-container:focus .item-hidden,
-.item-title-container:hover,
-.shadow:hover .item-hidden {
+// .item-title-container:hover,
+
+.shadow:hover .item-hidden 
+{
     cursor: pointer;
     background: rgba(0, 0, 0, 0.6);
     outline: none;
     z-index: 4;
     transition: all 0.3s linear;
+
+}
+
+.item-image-container:hover .item-title-container,
+.item-image-container:active .item-title-container,
+.item-image-container:focus .item-title-container {
+    z-index: 0;
+    opacity: 0;
 }
 
 .social {
