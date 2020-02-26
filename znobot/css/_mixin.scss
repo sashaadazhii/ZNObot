@@ -1,7 +1,6 @@
 @mixin font($font, $size,  $color, $transform) { 
     font-family: $font;
     font-size: $size;
-    // font-weight: $weight;
     color: $color;   
     text-transform: $transform;
 }

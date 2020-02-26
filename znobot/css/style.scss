@@ -33,11 +33,8 @@
     font-style: normal;
 }
 
-
 /*header*/
 .main-header {
-    // height: 100vh;
-    
     height: calc(var(--vh, 1vh) * 100);
     background: url(../assets/img/shevchenko.jpg) 50% no-repeat;
     background-size: cover;
@@ -73,9 +70,9 @@
     &:hover,
     &:active,
     &:focus {
-        background: url(../assets/img/logoZNO.gif) 50% no-repeat;
         width: 93px;
         height: 80px;
+        background: url(../assets/img/logoZNO.gif) 50% no-repeat;
         background-size: cover;
         background-position-y: 0;
     }
@@ -102,10 +99,10 @@
             &:before {
                 content: '';
                 position: absolute;
-                width: 0;
-                height: 2px;
                 bottom: 0;
                 left: 0;
+                width: 0;
+                height: 2px;
                 background: $color-accent;
                 visibility: hidden;
                 transition: all 0.3s linear;
@@ -150,8 +147,8 @@
     
     @include tablet {
         .slogan__title {
-            padding-top: 40px;
             max-width: 75%;
+            padding-top: 40px;
             font-size: $fsize-title;
         }
 
@@ -162,8 +159,6 @@
 
     @include phablet {
         .slogan__title {
-            padding-top: 40px;
-            max-width: 75%;
             font-size: 36px;
         }
     }
@@ -181,7 +176,6 @@
     }
 }
 
-/*MAIN*/
 main {
     overflow: hidden;
 }
@@ -386,9 +380,9 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 3;
         background: linear-gradient(154.3deg, rgba(5, 64, 118, 0.6) -21.38%, rgba(31, 142, 243, 0.19) 87.74%);
         border-radius: 5px;
+        z-index: 3;
     }
 
     .item-visible {
@@ -401,12 +395,12 @@ main {
 
     .item-hidden {
         position: absolute;
-        width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 100%;
+        height: 100%;
         @include font($font-regular, $fsize-primary, $color-basic, none);
         background: rgba(0, 0, 0, 0.1);
         border-radius: 5px;
@@ -450,10 +444,7 @@ main {
 .item-image-container:hover .item-hidden,
 .item-image-container:active .item-hidden,
 .item-image-container:focus .item-hidden,
-// .item-title-container:hover,
-
-.shadow:hover .item-hidden 
-{
+.shadow:hover .item-hidden {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.6);
     outline: none;
@@ -487,7 +478,6 @@ main {
     }
 }
 
-/*instructions*/
 .instruction {
     position: relative;
     height: 2300px;
@@ -581,9 +571,9 @@ main {
 
     &__number {
         position: absolute;
-        transform: translate(-50%, -50%);
         top: calc(50% - 5px);
         left: 50%;
+        transform: translate(-50%, -50%);
         @include font($font-bold, 288px, rgba(0, 122, 255, 0.7), none);
         z-index: 1;
 
@@ -597,21 +587,12 @@ main {
     }
 }
 
-.instr-block--first {
-    // position: absolute;
-}
-
 .instr-block--reverse {
     flex-direction: row-reverse;
-    // transform: translateY(100%);
 
     .instr-block__img {
         transform: scale(-1,1) translateX(-50%);
     }
-}
-.instr-block--last {
-    // position: absolute;
-    // bottom: 0;
 }
 
 /*footer*/
@@ -670,7 +651,7 @@ main {
 
     @include mobile {
         .menu__link {
-            font-size: $fsize-small; 
+            font-size: $fsize-small;
         }
     }
 }
@@ -692,6 +673,7 @@ main {
     max-width: 48px;
     max-height: 48px;
 }
+
 /*span*/
 .accent-text {
     color: $color-accent;
@@ -703,8 +685,8 @@ main {
 
 .accent-light {
     display: inline-block;
-    border-bottom: 2px solid $color-basic;
     padding-bottom: 2px;
+    border-bottom: 2px solid $color-basic;
     font-size: 26px;
     font-weight: $weight-bold;
 }

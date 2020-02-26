@@ -1,7 +1,26 @@
-@import 'layout.scss';
 @import 'variables.scss';
-@import 'btn.scss';
 @import 'mixin.scss';
+
+@include tabletLandscape {
+    .header-nav .menu-wrapper {
+        display: none;
+    }
+
+    .slogan .slogan__title {
+        padding: 0;
+        @include font($font-black, 36px, $color-basic, none);
+    }
+
+    .slogan .slogan__subtitle {
+        max-width: 100%;
+        padding: 15px 0;
+        @include font($font-regular, 14px, rgba(255, 255, 255, 0.8), none);
+    }
+
+    .accent-text {
+        display: block;
+    }
+}
 
 @include phabletLandscape {
     .header-nav {
@@ -23,16 +42,6 @@
     }
 }
 
-@include tabletLandscape {
-    .slogan .slogan__title {
-        @include font($font-black, $fsize-medium, $color-basic, none);
-    }
 
-    .slogan .slogan__subtitle {
-        max-width: 100%;
-        padding: 15px 0;
-        @include font($font-regular, 14px, rgba(255, 255, 255, 0.8), none);
-    }
-}
 
 
