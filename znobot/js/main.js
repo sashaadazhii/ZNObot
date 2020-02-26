@@ -12,7 +12,22 @@ $(document).ready(function () {
     });
 
     /*top*/
-    $("#toTop").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 800);
+    $('#toTop').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
     });
+
+    /*mobile 100vh */
+    var containerWidth = $('body').width();
+    // var $header = $('.main-header');
+    if (containerWidth <= 992) {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    }
+
 });

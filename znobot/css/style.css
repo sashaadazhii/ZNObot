@@ -116,7 +116,7 @@ a {
 
 /*header*/
 .main-header {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: url(../assets/img/shevchenko.jpg) 50% no-repeat;
   background-size: cover; }
   @media only screen and (max-width: 768px) {
