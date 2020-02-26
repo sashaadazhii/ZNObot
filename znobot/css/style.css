@@ -136,7 +136,8 @@ a {
   width: 93px;
   height: 80px;
   background: url(../assets/img/logo2.svg) 50% no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  transition: 0.2s linear; }
   .logo:hover, .logo:active, .logo:focus {
     width: 93px;
     height: 80px;
