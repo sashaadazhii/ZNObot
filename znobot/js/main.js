@@ -18,13 +18,13 @@ $(document).ready(function () {
 
     /*mobile 100vh */
     var containerWidth = $('body').width();
-    if (containerWidth <= 992) {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // if (containerWidth <= 992) {
+    //     let vh = window.innerHeight * 0.01;
+    //     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-        window.addEventListener('resize', () => {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        });
-    };
+    //     window.addEventListener('resize', () => {
+    //         let vh = window.innerHeight * 0.01;
+    //         document.documentElement.style.setProperty('--vh', `${vh}px`);
+    //     });
+    // };
 });
