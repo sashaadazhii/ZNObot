@@ -1,10 +1,12 @@
 @media only screen and (max-width: 992px) and (orientation: landscape) {
   .header-nav .menu-wrapper {
     display: none; }
+  .header-content {
+    height: calc(100% - 170px); }
   .slogan .slogan__title {
     padding: 0;
     font-family: "Cera Pro Black", sans-serif;
-    font-size: 36px;
+    font-size: 26px;
     color: #FFF;
     text-transform: none; }
   .slogan .slogan__subtitle {

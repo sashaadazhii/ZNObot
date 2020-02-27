@@ -7,12 +7,12 @@
     }
 
     .header-content {
-        height: calc(100% - 159px);
+        height: calc(100% - 170px);
     }
 
     .slogan .slogan__title {
         padding: 0;
-        @include font($font-black, 30px, $color-basic, none);
+        @include font($font-black, 26px, $color-basic, none);
     }
 
     .slogan .slogan__subtitle {
@@ -45,7 +45,3 @@
         display: block;
     }
 }
-
-
-
-
