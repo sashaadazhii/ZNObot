@@ -11,7 +11,7 @@ var app = new Vue({
         this.getQuestion = true;
 
         this.$http
-            .get('https://zno-dev.eu-central-1.elasticbeanstalk.com/questions/random?subject=ukr')
+            .get('http://zno-dev.eu-central-1.elasticbeanstalk.com/questions/random?subject=ukr')
             .then((response) => {
                 this.content = response.data.content;
                 this.choices = response.data.choices;
