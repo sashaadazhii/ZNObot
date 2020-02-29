@@ -10,8 +10,8 @@ var app = new Vue({
     mounted() {
         this.getQuestion = true;
 
-        this.$http
-            // axios
+        // this.$http
+        axios
             .get('http://zno-dev.eu-central-1.elasticbeanstalk.com/questions/random?subject=ukr')
             .then((response) => {
                 this.content = response.data.content;
