@@ -67,7 +67,7 @@
                                 <div class="test__heading"> &gt;&gt; Варіанти відповідей: </div>
                                 <ul class="test__prev">
                                     <li class="test__prev-answer" v-for="answer in choices"> -
-                                        {{answer.content}} </li>
+                                        {{answer.content[1]}} {{answer.content.slice(3)}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                     <label v-bind:for="option.id" class="answer__label">
                                         <input type="radio" v-model="answer" v-bind:id="option.id"
                                             v-bind:value="option.content" style="display:none;">
-                                        {{option.content[0]}}</label>
+                                        {{option.content[1]}}</label>
                                 </div>
                             </div>
                         </div>
@@ -360,6 +360,7 @@
 
     <script src="./js/jquery.js"></script>
     <script src="./js/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
     <script src="./js/main.js"></script>
     <script src="./js/questions.js"></script>
 </body>
