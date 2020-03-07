@@ -68,6 +68,8 @@
                                 <ul class="test__prev">
                                     <li class="test__prev-answer" v-for="answer in choices"> -
                                         {{answer.content[1]}} {{answer.content.slice(3)}}</li>
+                                    <li class="test__prev-answer" v-if="falseURL" v-for="answer in defaultChoices"> -
+                                        {{answer.content[1]}} {{answer.content.slice(3)}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -76,6 +78,15 @@
                             <div class="answer">
                                 <div class="answers-wrapper answer__item" v-for="option in choices" v-bind:class="{'answer__item--true': answer === option.content && option.is_correct, 
                             'answer__item--false': answer === option.content && !option.is_correct}">
+                                    <label v-bind:for="option.id" class="answer__label">
+                                        <input type="radio" v-model="answer" v-bind:id="option.id"
+                                            v-bind:value="option.content" style="display:none;">
+                                        {{option.content[1]}}</label>
+                                </div>
+
+                                <div class="answers-wrapper answer__item" v-if="falseURL"
+                                    v-for="option in defaultChoices" v-bind:class="{'answer__item--true': answer === option.content && option.is_correct, 
+                                'answer__item--false': answer === option.content && !option.is_correct}">
                                     <label v-bind:for="option.id" class="answer__label">
                                         <input type="radio" v-model="answer" v-bind:id="option.id"
                                             v-bind:value="option.content" style="display:none;">
