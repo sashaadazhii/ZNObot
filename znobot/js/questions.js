@@ -15,25 +15,9 @@ var app = new Vue({
             { id: 3, content: "*Г*: запанібрата, змито", is_correct: true }],
     },
 
-    // mounted() {
-    //     this.getQuestion = true;
-
-    //     this.$http
-    //         // axios
-    //         .get('http://zno-dev.eu-central-1.elasticbeanstalk.com/questions/random?subject=ukr')
-    //         .then((response) => {
-    //             this.content = response.data.content;
-    //             this.choices = response.data.choices;
-    //             console.log(response.data);
-
-    //         })
-    // },
-
-
     mounted() {
         this.getQuestion = true;
         var url = 'http://zno-dev.eu-central-1.elasticbeanstalk.com/questions/random?subject=ukr';
-
 
         this.$http      // axios
             .get(url)
@@ -48,14 +32,9 @@ var app = new Vue({
                     this.falseURL = true;
                     this.content = this.defaultContent;
                     this.choices - this.defaultChoices;
-                    console.log(error.data);
-                    console.log(error.status);
-                    console.log(error.headers);
                 }
                 return Promise.reject(error);
-
             })
-
     },
 
 })
