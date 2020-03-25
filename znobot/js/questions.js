@@ -36,5 +36,4 @@ var app = new Vue({
                 return Promise.reject(error);
             })
     },
-
 })
