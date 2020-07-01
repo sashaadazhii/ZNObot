@@ -328,7 +328,6 @@ main {
         max-width: 25%;
         height: 430px;
         padding: 15px;
-        transition: all 0.3s linear;
 
         &--main {
             flex: 50%;
@@ -355,12 +354,12 @@ main {
         position: relative;
         width: 100%;
         height: 100%;
-        transition: all 0.3s linear;
     }
 
     .item-image-container {
         width: 100%;
         height: 100%;
+        
     }
 
     .item-title-container {
@@ -369,6 +368,7 @@ main {
         width: 100%;
         transform: translateY(-60px);
         z-index: 5;
+        transition: all 0.3s ease-in-out;
 
         @include phablet {
             transform: translateY(-30px);
@@ -391,7 +391,6 @@ main {
         width: 100%;
         height: 100%;
         z-index: 2;
-        transition: all 0.3s linear;
     }
 
     .item-hidden {
@@ -406,7 +405,8 @@ main {
         background: rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         z-index: 1;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease-in-out;
+    
     }
 
     &__title {
@@ -416,6 +416,7 @@ main {
         text-align: center;
         border-radius: 5px;
         background: $color-block;
+        transition: all 0.3s ease-in-out;
 
         @include phablet {
             height: 40px;
@@ -446,12 +447,9 @@ main {
 .item-image-container:active .item-hidden,
 .item-image-container:focus .item-hidden,
 .shadow:hover .item-hidden {
-    cursor: pointer;
     background: rgba(0, 0, 0, 0.6);
     outline: none;
     z-index: 4;
-    transition: all 0.3s linear;
-
 }
 
 .item-image-container:hover .item-title-container,
@@ -470,7 +468,7 @@ main {
         max-width: 48px;
         max-height: 48px;
         margin: 15px;
-        transition: all 0.3s linear;
+        cursor: pointer;
 
         &__link {
             width: 100%;
@@ -522,15 +520,6 @@ main {
         position: relative;
         width: 525px;
         transform: translateX(-50%);
-        
-        // &:after {
-        //     position: absolute;
-        //     top: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     content: '';
-        //     background: url(../assets/img/brain1.png) 50% no-repeat;
-        // }
 
         @include tablet {
             max-width: 260px;
