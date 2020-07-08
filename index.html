@@ -62,35 +62,55 @@
                     <div id="app">
                         <div class="test-block">
                             <div class="test">
-                                <div class="test__question"><span class="question-mark">? </span>
-                                    {{content}} </div>
-                                <div class="test__heading"> &gt;&gt; Варіанти відповідей: </div>
-                                <ul class="test__prev">
-                                    <li class="test__prev-answer" v-for="answer in choices"> -
-                                        {{answer.content[1]}} {{answer.content.slice(3)}}</li>
-                                    <li class="test__prev-answer" v-if="falseURL" v-for="answer in defaultChoices"> -
-                                        {{answer.content[1]}} {{answer.content.slice(3)}}</li>
-                                </ul>
+                                <div v-if="falseURL" class="test__question">
+                                    <span class="question-mark">?</span>
+                                    {{defaultContent}}
+                                    <div class="test__heading">&gt;&gt; Варіанти відповідей:</div>
+                                    <ul class="test__prev">
+                                        <li class="test__prev-answer" v-for="choice in defaultChoices"
+                                            :key="choice.content">
+                                            -
+                                            {{choice.content[1]}} {{choice.content.slice(3)}}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div v-else class="test__question">
+                                    <span class="question-mark">?</span>
+                                    {{content}}
+                                    <div class="test__heading">&gt;&gt; Варіанти відповідей:</div>
+                                    <ul class="test__prev">
+                                        <li class="test__prev-answer" v-for="choice in choices" :key="choice.content">
+                                            -
+                                            {{choice.content[1]}} {{choice.content.slice(3)}}
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
                         <div class="answer-block">
-                            <div class="answer">
-                                <div class="answers-wrapper answer__item" v-for="option in choices" v-bind:class="{'answer__item--true': answer === option.content && option.is_correct, 
-                            'answer__item--false': answer === option.content && !option.is_correct}">
-                                    <label v-bind:for="option.id" class="answer__label">
-                                        <input type="radio" v-model="answer" v-bind:id="option.id"
-                                            v-bind:value="option.content" style="display:none;">
-                                        {{option.content[1]}}</label>
+                            <div class="answer" v-if="falseURL">
+                                <div class="answers-wrapper answer__item" v-for="answer in defaultChoices"
+                                    :key="answer.content"
+                                    v-bind:class="{'answer__item--true': userAnswer === answer.content && answer.is_correct, 
+                                              'answer__item--false': userAnswer === answer.content && !answer.is_correct}">
+                                    <label v-bind:for="answer.id" class="answer__label">
+                                        <input type="radio" v-model="userAnswer" v-bind:id="answer.id"
+                                            v-bind:value="answer.content" style="display:none;" />
+                                        {{answer.content[1]}}
+                                    </label>
                                 </div>
-
-                                <div class="answers-wrapper answer__item" v-if="falseURL"
-                                    v-for="option in defaultChoices" v-bind:class="{'answer__item--true': answer === option.content && option.is_correct, 
-                                'answer__item--false': answer === option.content && !option.is_correct}">
+                            </div>
+                            <div class="answer" v-else>
+                                <div class="answers-wrapper answer__item" v-for="option in choices"
+                                    :key="option.content"
+                                    v-bind:class="{'answer__item--true': userAnswer === option.content && option.is_correct, 
+                                                'answer__item--false': userAnswer === option.content && !option.is_correct}">
                                     <label v-bind:for="option.id" class="answer__label">
-                                        <input type="radio" v-model="answer" v-bind:id="option.id"
-                                            v-bind:value="option.content" style="display:none;">
-                                        {{option.content[1]}}</label>
+                                        <input type="radio" v-model="userAnswer" v-bind:id="option.id"
+                                            v-bind:value="option.content" style="display:none;" />
+                                        {{option.content[1]}}
+                                    </label>
                                 </div>
                             </div>
                         </div>
